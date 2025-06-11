@@ -2417,3 +2417,109 @@ NEW: Engagement Hero Section
   max-width: 700px;
   margin: 0 auto;
 }
+
+/*
+=================================
+MOBILE RESPONSIVE STYLES
+=================================
+*/
+@media (max-width: 768px) {
+    /* General */
+    body {
+        line-height: 1.5;
+    }
+    .vision-section, .expansion-section, .partners-section, .next-gen-section, .company-intro-section, .about-video-section, .history-section, .network-section, .awards-section, .product-specs-section, .engagement-hero-section, .contact-form-section {
+        padding: 60px 20px;
+    }
+
+    /* Header */
+    .fixed-header {
+        padding: 0 20px;
+        height: 60px;
+    }
+    .logo {
+        height: 40px;
+    }
+    .social-icons {
+        display: none;
+    }
+    .side-menu {
+        padding-top: 60px;
+    }
+    
+    /* Index Page Specific */
+    .overlay-text {
+        text-align: center;
+        left: 50%;
+        width: 90%;
+        transform: translate(-50%, -50%);
+    }
+    .overlay-text h1 { font-size: 2rem; }
+    .overlay-text h2 { font-size: 1.2rem; }
+    
+    .vision-title { font-size: 2.2rem; }
+    .vision-stats { flex-direction: column; gap: 30px; }
+    .stat-circle { width: 200px; height: 200px; }
+    
+    .next-gen-title { font-size: 2rem; }
+    .feature-item { flex-direction: column; gap: 10px; text-align: center; }
+    
+    .expansion-images { flex-direction: column; gap: 20px; }
+
+    /* About Page Specific */
+    .company-intro-section, .about-video-section {
+        margin-top: 60px;
+    }
+    .intro-title, .history-title, .network-title, .awards-title { font-size: 2.2rem; margin-bottom: 40px;}
+    .intro-stats { flex-direction: column; gap: 20px; }
+    
+    .timeline {
+        padding: 0;
+        width: 100%;
+    }
+    .timeline::before {
+        left: 20px;
+    }
+    .timeline-item {
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 0;
+    }
+    .timeline-item.right {
+        left: 0;
+    }
+    .timeline-item::after {
+        left: 11px;
+    }
+
+    /* Products Page Specific */
+    .page-hero {
+        margin-top: 60px;
+        height: 30vh;
+    }
+    .page-hero h1 {
+        font-size: 2.2rem;
+    }
+    .product-tabs {
+        flex-direction: column;
+        gap: 10px;
+    }
+    .network-section-item h3 { font-size: 1.3rem; }
+    .specs-header-container { text-align: center; }
+    .product-specs-section .specs-title, .product-specs-section .specs-subtitle { text-align: center; }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .footer-actions {
+        flex-direction: column-reverse;
+        align-items: center;
+        gap: 20px;
+    }
+    .footer-social {
+        margin-top: 20px;
+    }
+}
