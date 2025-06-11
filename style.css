@@ -1340,6 +1340,7 @@ html {
   width: 4px;
   background: linear-gradient(to bottom, #3498db, #2980b9);
   transform: translateX(-50%);
+  z-index: 1; /* Add this line */
 }
 
 .timeline-item {
@@ -1363,6 +1364,7 @@ html {
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
   border: 1px solid #ecf0f1;
+  z-index: 2; /* Add this line */
 }
 
 .timeline-image {
@@ -1389,6 +1391,7 @@ html {
   font-size: 1.1rem;
   font-weight: 700;
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  z-index: 3; /* Add this line */
 }
 
 .timeline-title {
