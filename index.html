@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TargetM Australia</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+<body>
+  <header class="fixed-header">
+    <a href="index.html"><img src="assets/logo.jpg" alt="TargetM Australia Logo" class="logo"></a>
+    
+    <div class="social-icons">
+      <a target="_blank" href="https://google.com" aria-label="Wechat"><img src="assets/wechat.png" alt="Wechat" /></a>
+      <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
+      <a target="_blank" href="https://google.com" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+      <a target="_blank" href="https://google.com" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+      <a target="_blank" href="https://google.com" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
+    </div>
+
+    <div class="menu-icons">
+      <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
+      <button id="close-btn" class="close-btn" onclick="toggleMenu()" aria-label="Close Menu">×</button>
+    </div>
+  </header>
+
+  <nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products & Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+<div class="video-container">
+    <div class="video-background">
+      <video autoplay muted loop playsinline>
+        <source src="assets/jpbackground.mp4" type="video/mp4" />
+      </video>
+      <div class="overlay-text">
+        <h1>Global Share No.1</h1>
+        <h2>Over 1.1 Million Installations</h2>
+        <p>Pioneering next-gen signage in elevator spaces.</p>
+      </div>
+    </div>
+  </div>
+
+<section class="vision-section">
+    <div class="vision-container">
+      <div class="vision-content" data-aos="fade-up">
+        <h1 class="vision-title">Bringing New Vision<br>to Elevators</h1>
+        <p class="vision-subtitle">World's Largest Digital Signage Network Service</p>
+        
+        <div class="vision-stats" data-aos="fade-up" data-aos-delay="200">
+          <div class="stat-circle left-stat">
+            <div class="stat-number">Global Reach<br><span class="large-number">300</span>+ Cities</div>
+            <div class="stat-label">Worldwide Presence</div>
+          </div>
+          
+          <div class="stat-circle center-stat featured">
+            <div class="stat-number">Installations<br><span class="large-number">1.1M</span>+ Units</div>
+            <div class="stat-label">Proven Track Record</div>
+          </div>
+          
+          <div class="stat-circle right-stat">
+            <div class="stat-number">Daily Reach<br><span class="large-number">400M</span>+ People</div>
+            <div class="stat-label">Viewer Engagement</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Navigation to About Page -->
+      <div class="section-navigation" data-aos="fade-up" data-aos-delay="400">
+        <a href="about.html" class="nav-link">
+          <span>Learn About Our Vision</span>
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="next-gen-section">
+    <div class="next-gen-background">
+      <video autoplay muted loop playsinline>
+        <source src="assets/background video.mp4" type="video/mp4" />
+      </video>
+      <div class="dark-overlay"></div>
+    </div>
+    
+    <div class="next-gen-content">
+      <h1 class="next-gen-title" data-aos="fade-up">
+        Target M's<br>
+        Next Generation Signage
+      </h1>
+      
+      <div class="features-list" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
+          <span class="feature-number">01</span>
+          <span class="feature-text">Customize Screen Content Freely!</span>
+        </div>
+        
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
+          <span class="feature-number">02</span>
+          <span class="feature-text">Crystal Clear Visuals That Attract Viewers!</span>
+        </div>
+        
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="500">
+          <span class="feature-number">03</span>
+          <span class="feature-text">Seamless Synchronization Across Multiple Units!</span>
+        </div>
+        
+        <div class="feature-item" data-aos="fade-left" data-aos-delay="600">
+          <span class="feature-number">04</span>
+          <span class="feature-text">Smart Installation Without Wall Damage!</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="expansion-section">
+  <div class="expansion-container">
+    <div class="expansion-content" data-aos="fade-up">
+      <h1 class="expansion-title">Expand to Australia!</h1>
+      <div class="expansion-description" data-aos="fade-up" data-aos-delay="200">
+        <p>Simple and Secure installation that keeps infrastructure intact</p>
+        <p>Turn elevator space into information center</p>
+      </div>
+      
+      <div class="expansion-images" data-aos="fade-up" data-aos-delay="300">
+        <div class="image-container">
+          <img src="assets/case1.png" alt="case1" />
+        </div>
+        <div class="image-container">
+          <img src="assets/case2.png" alt="case2" />
+        </div>
+      </div>
+      
+      <div class="expansion-info" data-aos="fade-up" data-aos-delay="400">
+        <p>Elevator screen installation expanding to Australia!</p>
+        <p>If you are property owner or management company and want to know more,</p>
+        <p>Please click the button below to reach out!</p>
+      </div>
+    </div>
+    
+    <!-- Navigation to Contact Page -->
+    <div class="section-navigation" data-aos="fade-up" data-aos-delay="500">
+      <a href="contact.html" class="contact-nav-button">
+        <span>Contact Us</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+  <section class="partners-section">
+    <div class="partners-background">
+      <div class="partners-overlay"></div>
+    </div>
+    
+    <div class="partners-content">
+      <h2 class="partners-title" data-aos="fade-up">Our Esteemed Clients and Partners</h2>
+      <h2 class="partners-slogan" data-aos="fade-up">We believe every client is a valuable, long-term partner.</h2>
+      
+      <div class="partners-scroll-container" data-aos="fade-up" data-aos-delay="200">
+        <div class="partners-scroll-track" id="partnersTrack">
+          <!-- First set of partner logos -->
+          <div class="partner-logo">
+            <img src="assets/a2.png" alt="A2" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/apple.png" alt="Apple" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/benz.jpg" alt="Benz" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/bmw.jpg" alt="Bmw" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/HSBC.jpg" alt="HSBC" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/mastercard.png" alt="Mastercard" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/nike.png" alt="Nike" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/swisse.jpg" alt="Swisse" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/ugg.png" alt="Ugg" />
+          </div>
+          
+          <!-- Duplicate set for seamless scrolling -->
+          <div class="partner-logo">
+            <img src="assets/a2.png" alt="A2" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/apple.png" alt="Apple" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/benz.jpg" alt="Benz" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/bmw.jpg" alt="Bmw" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/HSBC.jpg" alt="HSBC" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/mastercard.png" alt="Mastercard" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/nike.png" alt="Nike" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/swisse.jpg" alt="Swisse" />
+          </div>
+          <div class="partner-logo">
+            <img src="assets/ugg.png" alt="Ugg" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+ 
+<footer class="footer-section">
+    <div class="footer-container">
+      <div class="footer-content">
+        <!-- Company Info -->
+        <div class="footer-company">
+          <div class="footer-logo">
+            <img src="assets/logo.jpg" alt="TargetM Australia Logo" />
+            <span class="company-location">AUSTRALIA</span>
+          </div>
+          
+          <div class="company-details">
+            <h3>Target M Pty Ltd</h3>
+            <p>(A-share listed company, ticker 002027, Focus Media Group)</p>
+            
+            <div class="address">
+              <p>Unit B, Level 9, Tower 3, 18-38 Siddeley Street, Melbourne, VIC 3000 (MEL)</p>
+              <p>73 Thomas Street, Parramatta, NSW 2150 (SYD)</p>
+            </div>
+            
+            <div class="contact-info">
+              <p>rebeccawu@targetm.com.au</p>
+              <p>+61 4 1759 2856</p>
+            </div>
+            
+            <div class="copyright">
+              <p>© 2025 Target M Pty Ltd</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Navigation Links -->
+        <div class="footer-navigation">
+          <div class="nav-column">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Us</a>
+            <a href="products.html">Products & Services</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+        
+        <!-- Back to Top & Social -->
+        <div class="footer-actions">
+          <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </button>
+          
+          <div class="footer-social">
+            <a target="_blank" href="https://google.com" aria-label="Wechat"><img src="assets/wechat.png" alt="Wechat" /></a>
+            <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
+            <a target="_blank" href="https://google.com" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+            <a target="_blank" href="https://google.com" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+            <a target="_blank" href="https://google.com" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/menu.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-out-cubic',
+      once: true,
+      offset: 100
+    });
+  </script>
+</body>
+</html>
