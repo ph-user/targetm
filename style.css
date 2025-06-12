@@ -1333,6 +1333,7 @@ html {
 .award-image {
   width: 100%;
   height: 200px;
+  object-fit: cover;
   border-radius: 6px;
   margin-bottom: 20px;
 }
@@ -1584,18 +1585,13 @@ PRODUCTS & SERVICES PAGE STYLES
 
 /*
 =================================
-PRODUCTS & SERVICES PAGE STYLES
+PRODUCTS & SERVICES PAGE STYLES (V2)
 =================================
 */
 
 /* Main wrapper for the new networks section */
 .network-showcase-section-v2 {
   width: 100%;
-}
-
-/* Hidden radio inputs */
-.tab-input {
-  display: none;
 }
 
 /* New Dark Tab Bar */
@@ -1611,7 +1607,24 @@ PRODUCTS & SERVICES PAGE STYLES
   margin: 0 auto;
   display: flex;
   justify-content: center;
-  /* This centralizes the tabs */
+}
+
+.tab-label {
+  background: transparent;
+  border: none;
+  border-bottom: 4px solid transparent;
+  color: #a0a0a0;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  padding: 20px 25px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.tab-label:hover {
+  color: #ffffff;
 }
 
 /* Style for the active tab label */
@@ -1621,7 +1634,6 @@ PRODUCTS & SERVICES PAGE STYLES
 #tab-retail:checked~.product-tabs-bar label[for="tab-retail"] {
   color: #ffffff;
   border-bottom-color: #f0ad4e;
-  /* Accent color */
 }
 
 /* Content Area */
@@ -1629,6 +1641,11 @@ PRODUCTS & SERVICES PAGE STYLES
   width: 100%;
   padding: 80px 20px;
   background-color: #ffffff;
+}
+
+.network-content-panel {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
 }
 
 /* Show the content panel that corresponds to the checked radio button */
@@ -1946,7 +1963,8 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .awards-section,
   .product-specs-section,
   .engagement-hero-section,
-  .contact-form-section {
+  .contact-form-section,
+  .service-intro-section {
     padding: 60px 20px;
   }
 
@@ -2116,13 +2134,15 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .intro-title,
   .history-title,
   .network-title,
-  .awards-title {
+  .awards-title,
+  .service-title {
     font-size: 2.2rem;
     margin-bottom: 40px;
   }
   
-  .intro-subtitle {
-    font-size: 1.4rem;
+  .intro-subtitle,
+  .service-subtitle {
+    font-size: 1.1rem;
   }
   
   .intro-description,
@@ -2131,7 +2151,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   }
 
   .intro-stats {
-    flex-direction: row; /* Changed from column to row */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 40px;
@@ -2213,13 +2233,18 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     padding: 25px;
   }
 
-  .network-item-image,
+  .network-item-image {
+    max-width: 100%;
+    max-height: 250px; /* Constrain image height on mobile */
+  }
+  
   .network-item-content {
     max-width: 100%;
   }
 
   .tabs-container {
     justify-content: space-around;
+    flex-wrap: wrap; /* Allow tabs to wrap on small screens */
   }
 
   .tab-label {
