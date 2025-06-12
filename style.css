@@ -2712,3 +2712,38 @@ MOBILE RESPONSIVE STYLES
     font-size: 1.25rem;
   }
 }
+
+
+@media (max-width: 768px) {
+  .logo {
+    height: 32px;
+    margin-right: auto;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 16px;
+    top: 16px;
+    z-index: 1002;
+    background-color: transparent;
+    border: none;
+    font-size: 1.5rem;
+  }
+
+  .overlay-text {
+    top: 20%;
+    left: 5%;
+    right: 5%;
+    text-align: left;
+    padding: 0 10px;
+  }
+
+  .overlay-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .overlay-text h2 {
+    font-size: 1.2rem;
+  }
+}
