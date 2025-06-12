@@ -1963,7 +1963,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .awards-section,
   .product-specs-section,
   .engagement-hero-section,
-  .contact-form-section,
   .service-intro-section {
     padding: 60px 20px;
   }
@@ -2126,6 +2125,28 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     font-size: 1.1rem;
   }
 
+  /* Partners Section (Index Page) */
+  .partners-section {
+    min-height: 60vh;
+    padding: 60px 0;
+  }
+
+  .partners-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+
+  .partners-scroll-track {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .partner-logo {
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+  }
+
   /* About Page Specific */
   .company-intro-section {
     margin-top: 60px;
@@ -2134,14 +2155,12 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .intro-title,
   .history-title,
   .network-title,
-  .awards-title,
-  .service-title {
+  .awards-title {
     font-size: 2.2rem;
     margin-bottom: 40px;
   }
   
-  .intro-subtitle,
-  .service-subtitle {
+  .intro-subtitle {
     font-size: 1.1rem;
   }
   
@@ -2214,6 +2233,14 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   }
   
   /* Products Page Specific */
+  .service-title {
+    font-size: 2.5rem; /* Reduced from 4.5rem */
+  }
+
+  .service-subtitle {
+    font-size: 1.1rem; /* Reduced from 1.3rem */
+  }
+
   .page-hero {
     margin-top: 60px;
     height: 30vh;
