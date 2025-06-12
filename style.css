@@ -2653,3 +2653,62 @@ MOBILE RESPONSIVE STYLES
     height: 60vh;
   }
 }
+
+
+
+@media (max-width: 768px) {
+  .fixed-header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 16px;
+    height: auto;
+  }
+
+  .logo {
+    height: 36px;
+    width: auto;
+  }
+
+  .menu-toggle {
+    margin-left: auto;
+  }
+
+  .video-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .video-background {
+    margin-top: 70px;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  .video-background video {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 25%;
+    left: 5%;
+    right: 5%;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px #000;
+  }
+
+  .overlay-text h1 {
+    font-size: 2rem;
+  }
+
+  .overlay-text h2 {
+    font-size: 1.25rem;
+  }
+}
