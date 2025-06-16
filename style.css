@@ -1409,7 +1409,7 @@ html {
   }
 
   .timeline-year {
-    top: 0;
+    top: 20px;
     left: 20px; /* Align bubble with the line */
     transform: translateX(-50%); /* Center bubble on the line */
     width: 60px;
