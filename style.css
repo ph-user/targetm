@@ -2342,10 +2342,12 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* --- 2. DESKTOP OVERRIDES --- */
-/* These styles apply ONLY to screens 769px or wider */
+/* =================================
+   DESKTOP-ONLY TIMELINE STYLES (CORRECTED)
+   ================================= */
 
 @media (min-width: 769px) {
+
   .history-title {
     font-size: 3.5rem;
     margin-bottom: 80px;
@@ -2355,48 +2357,60 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     max-width: 800px;
   }
 
-  /* Re-center the line for desktop */
+  /* Re-center the main vertical line */
   .timeline::before {
     left: 50%;
   }
 
   .timeline-item {
-    padding-left: 0;
+    padding: 0;
     /* Reset mobile padding */
     width: 50%;
-    margin-bottom: 0;
-    /* Reset margin for tighter control */
+    margin-bottom: 40px;
   }
 
-  /* Push right items to the right half */
-  .timeline-item.right {
-    left: 50%;
-  }
-
-  .timeline-content {
-    padding: 30px;
-  }
-
-  .timeline-item.left .timeline-content {
-    margin: 30px 30px 30px 0;
+  /* Align left items to the left edge and align text to the right */
+  .timeline-item.left {
+    left: 0;
     text-align: right;
   }
 
-  .timeline-item.right .timeline-content {
-    margin: 30px 0 30px 30px;
+  /* Align right items to the 50% mark and align text to the left */
+  .timeline-item.right {
+    left: 50%;
     text-align: left;
   }
 
-  /* Correctly position the year bubble ON the center line */
+  /* Add space between content boxes and the center line */
+  .timeline-content {
+    margin: 0 45px;
+  }
+
+  /* --- THE KEY FIX FOR THE YEAR BUBBLE --- */
   .timeline-year {
-    left: 50%;
-    /* Position relative to the centered timeline */
+    position: absolute;
     top: 50%;
-    /* Vertically center relative to the item */
-    transform: translate(-50%, -50%);
-    /* Perfect centering */
+    /* Vertically center the bubble */
     width: 80px;
     height: 80px;
     font-size: 1.1rem;
+    z-index: 5;
+    /* Ensure it's on top */
+  }
+
+  /* Position the bubble for LEFT items */
+  .timeline-item.left .timeline-year {
+    right: 0;
+    /* Anchor to the right edge of the item */
+    transform: translate(50%, -50%);
+    /* Shift it right by half its own width */
+  }
+
+  /* Position the bubble for RIGHT items */
+  .timeline-item.right .timeline-year {
+    left: 0;
+    /* Anchor to the left edge of the item */
+    transform: translate(-50%, -50%);
+    /* Shift it left by half its own width */
   }
 }
