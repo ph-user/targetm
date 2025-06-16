@@ -1998,7 +1998,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .side-menu {
     padding-top: 60px;
   }
-  
+
   /* Hero Video & Overlay Text */
   .video-background {
     margin-top: 60px;
@@ -2012,7 +2012,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     transform: translate(-50%, -50%);
     width: 90%;
     text-align: center;
-    text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   }
 
   .overlay-text h1 {
@@ -2024,8 +2024,8 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     font-size: 1.2rem;
     line-height: 1.3;
   }
-  
-   .overlay-text p {
+
+  .overlay-text p {
     font-size: 1rem;
   }
 
@@ -2047,38 +2047,38 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     padding: 10px;
     transform: scale(1) !important;
   }
-  
+
   .stat-circle.featured {
-     transform: scale(1.05) !important;
+    transform: scale(1.05) !important;
   }
 
   .large-number {
     font-size: 1.8rem;
   }
-  
+
   .stat-number {
     font-size: 0.8rem;
   }
-  
+
   .stat-label {
     font-size: 0.8rem;
   }
-  
+
   /* Next Gen Section */
   .next-gen-section {
-      height: auto;
-      min-height: 80vh;
+    height: auto;
+    min-height: 80vh;
   }
-  
+
   .next-gen-content {
-      padding: 0 20px;
+    padding: 0 20px;
   }
-  
+
   .next-gen-title {
     font-size: 2rem;
     margin-bottom: 40px;
   }
-  
+
   .feature-item {
     min-width: auto;
     flex-direction: column;
@@ -2086,11 +2086,11 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     gap: 15px;
     padding: 20px;
   }
-  
+
   .feature-number {
     font-size: 2rem;
   }
-  
+
   .feature-text {
     font-size: 1.1rem;
   }
@@ -2159,11 +2159,11 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     font-size: 2.2rem;
     margin-bottom: 40px;
   }
-  
+
   .intro-subtitle {
     font-size: 1.1rem;
   }
-  
+
   .intro-description,
   .network-description {
     font-size: 1.1rem;
@@ -2175,55 +2175,172 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     justify-content: center;
     gap: 40px;
   }
-  
+
   .about-stat-number {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
-  .about-video-section video {
-      width: 100%;
-      height: auto;
+  .about-video-section {
+    min-height: 60vh;
+    background: white;
+    padding: 100px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* This line ensures it's centered on desktop */
+  }
+
+  .about-video-container {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
   }
 
   .about-video-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 40px;
+    text-align: center;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
   }
 
   /* Timeline */
+  .history-section {
+    min-height: 100vh;
+    background: #ffffff;
+    padding: 100px 20px;
+    position: relative;
+  }
+
+  .history-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .history-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 80px;
+    letter-spacing: -1px;
+  }
+
   .timeline {
-    padding: 20px 0;
-    width: 100%;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
   }
 
   .timeline::before {
-    left: 20px;
-    transform: translateX(0);
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #e9ecef;
+    z-index: 1;
   }
 
   .timeline-item {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    padding-left: 50px;
-    margin-bottom: 80px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 60px;
+    width: 50%;
+    /* Set initial width for positioning */
   }
-  
+
+  .timeline-item.right {
+    left: 50%;
+    justify-content: flex-end;
+  }
+
   .timeline-content {
-      width: 100%;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    position: relative;
+    z-index: 2;
+    width: 90%;
+    /* Adjust width of content box */
+  }
+
+  .timeline-item.right .timeline-content {
+    text-align: right;
+  }
+
+  .timeline-image {
+    width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
 
   .timeline-year {
-    left: 20px;
-    top: -40px;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 60px;
-    font-size: 0.9rem;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background: #3498db;
+    color: white;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.1rem;
+    font-weight: 700;
+    box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+    z-index: 3;
   }
-  
+
+  .timeline-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+  }
+
+  .timeline-description {
+    font-size: 1rem;
+    color: #7f8c8d;
+    line-height: 1.6;
+  }
+
+  /* Adjust positioning of the bubble */
+  .timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #3498db;
+    z-index: 4;
+  }
+
+  .timeline-item.left::before {
+    left: calc(50% - 60px);
+    /* Adjust based on bubble and spacing */
+  }
+
+  .timeline-item.right::before {
+    right: calc(50% - 60px);
+    /* Adjust based on bubble and spacing */
+  }
+
   /* Network Section (About Page) */
   .network-section {
-      background-attachment: scroll; /* Fixes background on mobile */
+    background-attachment: scroll;
+    /* Fixes background on mobile */
   }
 
   .network-grid {
@@ -2231,14 +2348,16 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 20px;
   }
-  
+
   /* Products Page Specific */
   .service-title {
-    font-size: 2.5rem; /* Reduced from 4.5rem */
+    font-size: 2.5rem;
+    /* Reduced from 4.5rem */
   }
 
   .service-subtitle {
-    font-size: 1.1rem; /* Reduced from 1.3rem */
+    font-size: 1.1rem;
+    /* Reduced from 1.3rem */
   }
 
   .page-hero {
@@ -2254,7 +2373,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     flex-direction: column;
     gap: 10px;
   }
-  
+
   .network-item-v2 {
     flex-direction: column;
     padding: 25px;
@@ -2262,16 +2381,18 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
 
   .network-item-image {
     max-width: 100%;
-    max-height: 250px; /* Constrain image height on mobile */
+    max-height: 250px;
+    /* Constrain image height on mobile */
   }
-  
+
   .network-item-content {
     max-width: 100%;
   }
 
   .tabs-container {
     justify-content: space-around;
-    flex-wrap: wrap; /* Allow tabs to wrap on small screens */
+    flex-wrap: wrap;
+    /* Allow tabs to wrap on small screens */
   }
 
   .tab-label {
@@ -2288,7 +2409,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .product-specs-section .specs-subtitle {
     text-align: center;
   }
-  
+
   /* Awards */
   .awards-grid {
     grid-template-columns: 1fr;
@@ -2309,7 +2430,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     align-items: center;
     text-align: center;
   }
-  
+
   .footer-actions {
     flex-direction: column-reverse;
     align-items: center;
@@ -2320,8 +2441,8 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   .footer-social a {
-      margin-top: 0;
+    margin-top: 0;
   }
-} 
+}
