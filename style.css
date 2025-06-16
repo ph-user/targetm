@@ -2342,11 +2342,9 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* =================================
-   DESKTOP-ONLY TIMELINE STYLES (CORRECTED)
-   ================================= */
-
 @media (min-width: 769px) {
+
+  /* --- DESKTOP-ONLY TIMELINE STYLES --- */
 
   .history-title {
     font-size: 3.5rem;
@@ -2357,36 +2355,38 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     max-width: 800px;
   }
 
-  /* Re-center the main vertical line */
+  /* Re-center the main vertical line for desktop */
   .timeline::before {
     left: 50%;
   }
 
+  /* Base style for all timeline items on desktop */
   .timeline-item {
-    padding: 0;
-    /* Reset mobile padding */
+    position: relative;
     width: 50%;
-    margin-bottom: 40px;
+    padding: 0 40px;
+    /* Creates space from the center line */
+    margin-bottom: 50px;
   }
 
-  /* Align left items to the left edge and align text to the right */
+  /* Rules for items on the LEFT side */
   .timeline-item.left {
     left: 0;
     text-align: right;
   }
 
-  /* Align right items to the 50% mark and align text to the left */
+  /* Rules for items on the RIGHT side */
   .timeline-item.right {
     left: 50%;
     text-align: left;
   }
 
-  /* Add space between content boxes and the center line */
+  /* Reset any mobile-specific margins */
   .timeline-content {
-    margin: 0 45px;
+    margin: 0;
   }
 
-  /* --- THE KEY FIX FOR THE YEAR BUBBLE --- */
+  /* --- The Corrected Year Bubble Positioning --- */
   .timeline-year {
     position: absolute;
     top: 50%;
@@ -2395,7 +2395,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     height: 80px;
     font-size: 1.1rem;
     z-index: 5;
-    /* Ensure it's on top */
   }
 
   /* Position the bubble for LEFT items */
@@ -2403,7 +2402,7 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     right: 0;
     /* Anchor to the right edge of the item */
     transform: translate(50%, -50%);
-    /* Shift it right by half its own width */
+    /* Shift it right by half its own width to center it on the line */
   }
 
   /* Position the bubble for RIGHT items */
@@ -2411,6 +2410,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     left: 0;
     /* Anchor to the left edge of the item */
     transform: translate(-50%, -50%);
-    /* Shift it left by half its own width */
+    /* Shift it left by half its own width to center it on the line */
   }
 }
