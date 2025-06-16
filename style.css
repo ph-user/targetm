@@ -1969,3 +1969,447 @@ NEW: Engagement Hero Section
   max-width: 700px;
   margin: 0 auto;
 }
+
+
+/*
+=================================
+MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
+=================================
+*/
+@media (max-width: 768px) {
+
+  /* General */
+  body {
+    line-height: 1.5;
+  }
+
+  .vision-section,
+  .expansion-section,
+  .partners-section,
+  .next-gen-section,
+  .company-intro-section,
+  .about-video-section,
+  .history-section,
+  .network-section,
+  .awards-section,
+  .product-specs-section,
+  .engagement-hero-section,
+  .service-intro-section {
+    padding: 60px 20px;
+  }
+
+  /* Header */
+  .fixed-header {
+    padding: 0 16px;
+    height: 60px;
+    justify-content: space-between;
+  }
+
+  .logo {
+    height: 32px;
+    margin-right: auto;
+  }
+
+  .menu-toggle {
+    display: flex;
+    background-color: #333;
+    width: 36px;
+    height: 36px;
+    border-radius: 4px;
+    border: none;
+    position: relative;
+    z-index: 1002;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    display: none;
+  }
+
+  .side-menu {
+    padding-top: 60px;
+  }
+
+  /* Hero Video & Overlay Text */
+  .video-background {
+    margin-top: 60px;
+    height: 60vh;
+  }
+
+  .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90%;
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  }
+
+  .overlay-text h1 {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .overlay-text h2 {
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  .overlay-text p {
+    font-size: 1rem;
+  }
+
+  /* Vision Section */
+  .vision-title {
+    font-size: 2.2rem;
+  }
+
+  .vision-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .stat-circle {
+    width: 160px;
+    height: 160px;
+    padding: 10px;
+    transform: scale(1) !important;
+  }
+
+  .stat-circle.featured {
+    transform: scale(1.05) !important;
+  }
+
+  .large-number {
+    font-size: 1.8rem;
+  }
+
+  .stat-number {
+    font-size: 0.8rem;
+  }
+
+  .stat-label {
+    font-size: 0.8rem;
+  }
+
+  /* Next Gen Section */
+  .next-gen-section {
+    height: auto;
+    min-height: 80vh;
+  }
+
+  .next-gen-content {
+    padding: 0 20px;
+  }
+
+  .next-gen-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .feature-item {
+    min-width: auto;
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+    padding: 20px;
+  }
+
+  .feature-number {
+    font-size: 2rem;
+  }
+
+  .feature-text {
+    font-size: 1.1rem;
+  }
+
+  /* Expansion Section */
+  .expansion-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+
+  .expansion-description p {
+    font-size: 1.1rem;
+  }
+
+  .expansion-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .image-container {
+    width: 280px;
+    height: 180px;
+  }
+
+  .expansion-info p {
+    font-size: 1rem;
+  }
+
+  .contact-nav-button {
+    padding: 18px 40px;
+    font-size: 1.1rem;
+  }
+
+  /* Partners Section (Index Page) */
+  .partners-section {
+    min-height: 60vh;
+    padding: 60px 0;
+  }
+
+  .partners-title {
+    font-size: 2.2rem;
+    margin-bottom: 50px;
+  }
+
+  .partners-scroll-track {
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .partner-logo {
+    width: 100px;
+    height: 60px;
+    padding: 10px;
+  }
+
+  /* About Page Specific */
+  .company-intro-section {
+    margin-top: 60px;
+  }
+
+  .intro-title,
+  .history-title,
+  .network-title,
+  .awards-title {
+    font-size: 2.2rem;
+    margin-bottom: 40px;
+  }
+
+  .intro-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .intro-description,
+  .network-description {
+    font-size: 1.1rem;
+  }
+
+  .intro-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+  }
+
+  .about-stat-number {
+    font-size: 2.5rem;
+  }
+
+
+  /* Network Section (About Page) */
+  .network-section {
+    background-attachment: scroll;
+    /* Fixes background on mobile */
+  }
+
+  .network-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 20px;
+  }
+
+  /* Products Page Specific */
+  .service-title {
+    font-size: 2.5rem;
+    /* Reduced from 4.5rem */
+  }
+
+  .service-subtitle {
+    font-size: 1.1rem;
+    /* Reduced from 1.3rem */
+  }
+
+  .page-hero {
+    margin-top: 60px;
+    height: 30vh;
+  }
+
+  .page-hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .product-tabs {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .network-item-v2 {
+    flex-direction: column;
+    padding: 25px;
+  }
+
+  .network-item-image {
+    max-width: 100%;
+    max-height: 250px;
+    /* Constrain image height on mobile */
+  }
+
+  .network-item-content {
+    max-width: 100%;
+  }
+
+  .tabs-container {
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /* Allow tabs to wrap on small screens */
+  }
+
+  .tab-label {
+    padding: 15px 10px;
+    font-size: 0.9rem;
+  }
+
+  .network-section-item h3 {
+    font-size: 1.3rem;
+  }
+
+  .specs-header-container,
+  .product-specs-section .specs-title,
+  .product-specs-section .specs-subtitle {
+    text-align: center;
+  }
+
+  /* Awards */
+  .awards-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .award-item {
+    padding: 20px;
+  }
+
+  .award-image {
+    height: 180px;
+  }
+
+  /* Footer */
+  .footer-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-actions {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .footer-social {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .footer-social a {
+    margin-top: 0;
+  }
+}
+
+/* =================================
+   ABOUT PAGE: VIDEO SECTION (CORRECTED)
+   ================================= */
+
+/* Mobile-First Styles (Default) */
+.about-video-section {
+  background: white;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-video-container {
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.about-video-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.about-video-section video {
+  width: 100%;
+  height: auto;
+}
+
+/* Desktop Styles */
+@media (min-width: 769px) {
+  .about-video-section {
+    min-height: 60vh;
+    padding: 100px 20px;
+  }
+
+  .about-video-title {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-form-section {
+  background: #ffffff;
+  padding: 80px 20px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.contact-intro {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.contact-form textarea {
+  min-height: 120px;
+}
+
+.contact-form button {
+  width: fit-content;
+  padding: 12px 24px;
+  background-color: white;
+  color: orange;
+  border: 1px solid orange;
+  font-weight: bold;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.contact-form button:hover {
+  background-color: orange;
+  color: white;
+}
