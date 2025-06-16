@@ -1108,16 +1108,12 @@ html {
   opacity: 0.9;
 }
 
-/* History Section */
 
 
 
 
 
 
-.timeline-item.right {
-  flex-direction: row-reverse;
-}
 
 
 
@@ -2077,53 +2073,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   }
 
 
-
-
-  /* Timeline */
-
-
-
-
-
-
-
-
-  .timeline-item.right {
-    left: 50%;
-    justify-content: flex-end;
-  }
-
-  .timeline-item.right .timeline-content {
-    text-align: right;
-  }
-
-
-
-
-
-  /* Adjust positioning of the bubble */
-  .timeline-item::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: #3498db;
-    z-index: 4;
-  }
-
-  .timeline-item.left::before {
-    left: calc(50% - 60px);
-    /* Adjust based on bubble and spacing */
-  }
-
-  .timeline-item.right::before {
-    right: calc(50% - 60px);
-    /* Adjust based on bubble and spacing */
-  }
-
   /* Network Section (About Page) */
   .network-section {
     background-attachment: scroll;
@@ -2281,10 +2230,12 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
 
 
 /* =================================
-   ABOUT PAGE: HISTORY SECTION (CORRECTED)
+   ABOUT PAGE: HISTORY SECTION (CORRECTED V2)
    ================================= */
 
-/* Mobile-First Styles (Default) */
+/* --- 1. BASE STYLES (Mobile First) --- */
+/* By default, this creates a single column on the left for mobile */
+
 .history-section {
   background: #ffffff;
   padding: 60px 20px;
@@ -2307,40 +2258,46 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
 
 .timeline {
   position: relative;
+  /* This is the main positioning anchor */
   width: 100%;
   margin: 0 auto;
-  padding: 20px 0;
 }
 
+/* The vertical line on the left for MOBILE */
 .timeline::before {
   content: '';
   position: absolute;
-  left: 20px;
-  /* Line on the left for mobile */
   top: 0;
   bottom: 0;
   width: 4px;
   background: #e9ecef;
+  left: 20px;
+  /* Position line 20px from the left */
+  margin-left: -2px;
 }
 
 .timeline-item {
-  margin-bottom: 50px;
   position: relative;
-  padding-left: 50px;
-  /* Space for content to the right of the line */
+  /* Each item is a positioning context for its year bubble */
+  margin-bottom: 50px;
+  padding-left: 55px;
+  /* Create space to the right of the line */
 }
 
-/* Ensure all items behave the same on mobile */
-.timeline-item.right {
-  flex-direction: row;
-  /* Reset responsive property */
+/* This resets any problematic desktop styles on mobile */
+.timeline-item.right,
+.timeline-item.left {
+  left: 0;
+  width: 100%;
+  padding-right: 0;
 }
 
 .timeline-content {
   background: #f8f9fa;
-  padding: 20px;
   border-radius: 8px;
-  position: relative;
+  padding: 20px;
+  text-align: left;
+  /* All text is left-aligned on mobile */
 }
 
 .timeline-image {
@@ -2366,11 +2323,11 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
 
 .timeline-year {
   position: absolute;
-  top: -20px;
-  /* Position above the content block */
-  left: 0px;
+  top: 0;
+  left: 20px;
   /* Align with the timeline line */
   transform: translateX(-50%);
+  /* Center the bubble on the line */
   width: 60px;
   height: 60px;
   border-radius: 50%;
@@ -2385,12 +2342,10 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
-/* Desktop Styles (min-width for larger screens) */
-@media (min-width: 769px) {
-  .history-section {
-    padding: 100px 20px;
-  }
+/* --- 2. DESKTOP OVERRIDES --- */
+/* These styles apply ONLY to screens 769px or wider */
 
+@media (min-width: 769px) {
   .history-title {
     font-size: 3.5rem;
     margin-bottom: 80px;
@@ -2400,43 +2355,48 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     max-width: 800px;
   }
 
+  /* Re-center the line for desktop */
   .timeline::before {
     left: 50%;
-    /* Center the line on desktop */
-    transform: translateX(-50%);
   }
 
   .timeline-item {
     padding-left: 0;
     /* Reset mobile padding */
     width: 50%;
-    margin-bottom: 60px;
+    margin-bottom: 0;
+    /* Reset margin for tighter control */
   }
 
-  /* Position right-side items */
+  /* Push right items to the right half */
   .timeline-item.right {
     left: 50%;
   }
 
   .timeline-content {
-    padding: 20px 30px;
-  }
-
-  .timeline-year {
-    left: 50%;
-    top: 50%;
-    /* Center vertically on desktop */
-    transform: translate(-50%, -50%);
-    width: 80px;
-    height: 80px;
-    font-size: 1.1rem;
-  }
-
-  .timeline-item.right .timeline-content {
-    margin-left: 30px;
+    padding: 30px;
   }
 
   .timeline-item.left .timeline-content {
-    margin-right: 30px;
+    margin: 30px 30px 30px 0;
+    text-align: right;
+  }
+
+  .timeline-item.right .timeline-content {
+    margin: 30px 0 30px 30px;
+    text-align: left;
+  }
+
+  /* Correctly position the year bubble ON the center line */
+  .timeline-year {
+    left: 50%;
+    /* Position relative to the centered timeline */
+    top: 50%;
+    /* Vertically center relative to the item */
+    transform: translate(-50%, -50%);
+    /* Perfect centering */
+    width: 80px;
+    height: 80px;
+    font-size: 1.1rem;
   }
 }
