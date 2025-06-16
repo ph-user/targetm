@@ -825,7 +825,7 @@ html {
 
 .timeline-year {
   position: absolute;
-  top: 50%;
+  top: 20px;
   width: 80px;
   height: 80px;
   border-radius: 50%;
