@@ -720,14 +720,11 @@ html {
 }
 
 /* =================================
-   ABOUT PAGE: HISTORY TIMELINE (FINAL - REFACTORED)
+   ABOUT PAGE: HISTORY TIMELINE (REFACTORED)
    ================================= */
-
-/* --- Mobile-First Base Styles --- */
-/* This defines the approved mobile layout */
 .history-section {
   background: #ffffff;
-  padding: 60px 20px;
+  padding: 100px 20px;
   position: relative;
 }
 
@@ -738,7 +735,7 @@ html {
 }
 
 .history-title {
-  font-size: 2.2rem;
+  font-size: 3.5rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 80px;
@@ -747,11 +744,11 @@ html {
 
 .timeline {
   position: relative;
-  width: 100%;
+  max-width: 800px;
   margin: 0 auto;
 }
 
-/* The vertical line on the left for MOBILE */
+/* The centered vertical line for DESKTOP */
 .timeline::before {
   content: '';
   position: absolute;
@@ -759,31 +756,38 @@ html {
   bottom: 0;
   width: 4px;
   background: #e9ecef;
-  left: 20px;
+  left: 50%;
   transform: translateX(-50%);
   z-index: 1;
 }
 
 .timeline-item {
   position: relative;
+  width: 50%;
   margin-bottom: 50px;
-  padding-left: 55px;
+  display: flex; /* Use flexbox for content alignment */
+  align-items: center; /* Vertically center content */
 }
 
-/* Reset desktop-specific styles for mobile view */
-.timeline-item.right,
 .timeline-item.left {
   left: 0;
-  width: 100%;
-  padding-right: 0;
+  padding-right: 40px; /* Space from center line */
+  justify-content: flex-end; /* Align content to the right */
+  text-align: right;
+}
+
+.timeline-item.right {
+  left: 50%;
+  padding-left: 40px; /* Space from center line */
+  justify-content: flex-start; /* Align content to the left */
   text-align: left;
 }
 
 .timeline-content {
   background: #f8f9fa;
   border-radius: 8px;
-  padding: 20px;
-  width: 100%;
+  padding: 30px;
+  width: 100%; /* Content takes full width of parent item */
 }
 
 .timeline-image {
@@ -807,19 +811,16 @@ html {
   line-height: 1.6;
 }
 
-/* Mobile year bubble position */
 .timeline-year {
   position: absolute;
-  top: 0;
-  left: 20px;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 60px;
+  top: 50%;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 0.9rem;
+  font-size: 1.1rem;
   font-weight: 700;
   background: #3498db;
   color: white;
@@ -827,46 +828,16 @@ html {
   box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
 }
 
-
-/* --- Desktop Overrides for Timeline --- */
-@media (min-width: 769px) {
-  .history-title {
-    font-size: 3.5rem;
-  }
-  .timeline {
-    max-width: 800px;
-  }
-  .timeline::before {
-    left: 50%; /* Center the line */
-  }
-  .timeline-item {
-    width: 50%;
-    padding: 0 45px; /* Gutter from center */
-    margin-bottom: 50px;
-  }
-  .timeline-item.left {
-    left: 0;
-    text-align: right;
-  }
-  .timeline-item.right {
-    left: 50%;
-    text-align: left;
-  }
-  .timeline-year {
-    top: 20px; /* Position near the top */
-    width: 80px;
-    height: 80px;
-    font-size: 1.1rem;
-  }
-  .timeline-item.left .timeline-year {
-    right: 0;
-    transform: translate(50%, 0); /* Center on line */
-  }
-  .timeline-item.right .timeline-year {
-    left: 0;
-    transform: translate(-50%, 0); /* Center on line */
-  }
+.timeline-item.left .timeline-year {
+  right: 0;
+  transform: translate(50%, -50%);
 }
+
+.timeline-item.right .timeline-year {
+  left: 0;
+  transform: translate(-50%, -50%);
+}
+
 
 /* --- About Page: Media Network --- */
 .network-section {
@@ -1023,285 +994,6 @@ html {
   line-height: 1.6;
 }
 
-
-/* --- Products Page --- */
-.product-specs-section {
-  padding: 80px 20px;
-  background-color: #ffffff;
-}
-.engagement-hero-section {
-  position: relative;
-  padding: 120px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 80vh;
-  color: #ffffff;
-  background-image: url('assets/product-background.png');
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
-.engagement-hero-section::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
-}
-.engagement-content {
-  position: relative;
-  max-width: 900px;
-  text-align: left;
-}
-.engagement-title {
-  font-size: 3.5rem;
-  font-weight: 300;
-  line-height: 1.3;
-  margin-bottom: 30px;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-.cursive-highlight {
-  font-family: "Brush Script MT", "Brush Script Std", cursive;
-  color: #f0ad4e;
-  font-weight: 400;
-  font-size: 4.5rem;
-}
-.engagement-content p {
-  font-size: 1.2rem;
-  line-height: 1.8;
-  font-weight: 300;
-  margin-bottom: 20px;
-  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-}
-.service-intro-section {
-  padding: 120px 40px;
-  text-align: center;
-}
-.service-container {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.service-title {
-  font-size: 4.5rem;
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-.service-subtitle {
-  font-size: 1.3rem;
-  color: #333;
-  margin-bottom: 60px;
-  letter-spacing: 1px;
-}
-.service-description p {
-  font-size: 1.2rem;
-  color: #666;
-  line-height: 1.8;
-  max-width: 700px;
-  margin: 0 auto;
-}
-.network-showcase-section-v2 {
-  width: 100%;
-}
-.tab-input {
-  display: none;
-}
-.product-tabs-bar {
-  width: 100%;
-  background-color: #1f1f1f;
-  padding: 0 20px;
-  border-bottom: 1px solid #333;
-}
-.tabs-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: center;
-}
-.tab-label {
-  background: transparent;
-  border: none;
-  border-bottom: 4px solid transparent;
-  color: #a0a0a0;
-  cursor: pointer;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  padding: 20px 25px;
-  text-transform: uppercase;
-  transition: all 0.3s ease;
-}
-.tab-label:hover {
-  color: #ffffff;
-}
-#tab-residential:checked~.product-tabs-bar label[for="tab-residential"],
-#tab-commercial:checked~.product-tabs-bar label[for="tab-commercial"],
-#tab-carpark:checked~.product-tabs-bar label[for="tab-carpark"],
-#tab-retail:checked~.product-tabs-bar label[for="tab-retail"] {
-  color: #ffffff;
-  border-bottom-color: #f0ad4e;
-}
-.network-content-area-v2 {
-  width: 100%;
-  padding: 80px 20px;
-  background-color: #ffffff;
-}
-.network-content-panel {
-  display: none;
-  animation: fadeIn 0.5s ease-in-out;
-}
-#tab-residential:checked~.network-content-area-v2 #residential-content,
-#tab-commercial:checked~.network-content-area-v2 #commercial-content,
-#tab-carpark:checked~.network-content-area-v2 #carpark-content,
-#tab-retail:checked~.network-content-area-v2 #retail-content {
-  display: block;
-}
-.network-item-v2 {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-  background: #f8f9fa;
-  padding: 40px;
-  border-radius: 8px;
-  border: 1px solid #e9ecef;
-}
-.network-item-image {
-  flex: 1 1 50%;
-  max-width: 50%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 6px;
-}
-.network-item-content {
-  flex: 1 1 50%;
-  max-width: 50%;
-  text-align: left;
-}
-.network-item-content h3 {
-  font-size: 2rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 15px;
-}
-.network-item-content p {
-  font-size: 1.1rem;
-  color: #555;
-  line-height: 1.7;
-  margin-bottom: 30px;
-}
-.network-stats {
-  display: flex;
-  gap: 15px;
-}
-.network-stats .stat {
-  padding: 15px 25px;
-  border-radius: 6px;
-  text-align: center;
-}
-.network-stats .stat.light {
-  background-color: #e9ecef;
-  color: #2c3e50;
-}
-.network-stats .stat.dark {
-  background-color: #343a40;
-  color: #ffffff;
-}
-.network-stats .stat span {
-  display: block;
-  font-size: 0.9rem;
-  margin-bottom: 5px;
-  opacity: 0.9;
-}
-.network-stats .stat strong {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-}
-.specs-title {
-  font-weight: 700;
-  color: #2c3e50;
-  margin-bottom: 10px;
-}
-.specs-subtitle {
-  color: #555;
-  margin-bottom: 50px;
-}
-.specs-images-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
-}
-.spec-image-item-wide {
-  width: 100%;
-  max-width: 800px;
-  margin: 0 auto;
-}
-.spec-image-item-wide img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-.specs-table-title {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: #2c3e50;
-  margin-top: 60px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-.specs-table-wrapper {
-  overflow-x: auto;
-}
-.specs-table {
-  width: 100%;
-  max-width: 900px;
-  margin: 0 auto;
-  border-collapse: collapse;
-  text-align: left;
-}
-.specs-table th,
-.specs-table td {
-  padding: 15px;
-  border-bottom: 1px solid #e9ecef;
-  font-size: 1rem;
-}
-.specs-table thead {
-  background-color: #f8f9fa;
-}
-.specs-table th {
-  font-weight: 600;
-  color: #2c3e50;
-}
-.specs-table tbody tr:hover {
-  background-color: #f1f3f5;
-}
-.specs-table td:first-child {
-  font-weight: 500;
-  color: #34495e;
-}
-.specs-header-container {
-  text-align: left;
-  max-width: 900px;
-  margin: 0 auto 50px auto;
-}
-.product-specs-section .specs-title {
-  font-size: 2.2rem;
-  margin-bottom: 5px;
-  text-align: left;
-}
-.product-specs-section .specs-subtitle {
-  font-size: 1.1rem;
-  color: #333;
-  margin-bottom: 0;
-  text-align: left;
-}
-.installation-header {
-  margin-top: 80px;
-}
 
 /* =================================
    FOOTER
@@ -1492,9 +1184,8 @@ html {
 
 
 /* =================================
-   MOBILE RESPONSIVE STYLES (CONSOLIDATED & FINAL)
+   MOBILE RESPONSIVE STYLES (CONSOLIDATED)
    ================================= */
-
 @media (max-width: 768px) {
 
   /* --- General --- */
@@ -1507,9 +1198,7 @@ html {
   .history-section,
   .network-section,
   .awards-section,
-  .service-intro-section,
-  .product-specs-section,
-  .engagement-hero-section {
+  .service-intro-section {
     padding: 60px 20px;
   }
 
@@ -1691,29 +1380,29 @@ html {
     grid-template-columns: 1fr;
   }
 
-  /* --- Products Page --- */
-  .network-item-v2 {
-    flex-direction: column;
-    padding: 25px;
+  /* Timeline Mobile Styles */
+  .timeline::before {
+    left: 20px; /* Position line on the left */
+    transform: translateX(0);
   }
-  .network-item-image,
-  .network-item-content {
-    max-width: 100%;
+
+  .timeline-item,
+  .timeline-item.right,
+  .timeline-item.left {
+    width: 100%;
+    left: 0; /* Reset desktop positioning */
+    padding-left: 55px; /* Space for content */
+    padding-right: 0;
+    text-align: left; /* Ensure all text is left-aligned */
   }
-  .network-item-image {
-    max-height: 250px;
-  }
-  .tabs-container {
-    flex-wrap: wrap;
-  }
-  .tab-label {
-    padding: 15px 10px;
+
+  .timeline-year {
+    top: 0;
+    left: 20px; /* Align bubble with the line */
+    transform: translateX(-50%); /* Center bubble on the line */
+    width: 60px;
+    height: 60px;
     font-size: 0.9rem;
-  }
-  .specs-header-container,
-  .product-specs-section .specs-title,
-  .product-specs-section .specs-subtitle {
-    text-align: center;
   }
 
   /* --- Footer --- */
