@@ -2431,3 +2431,25 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   background-color: orange;
   color: white;
 }
+
+
+@media (max-width: 768px) {
+  .timeline::before {
+    left: 32px;
+    transform: translateX(0);
+  }
+
+  .timeline-item,
+  .timeline-item.left,
+  .timeline-item.right {
+    width: 100%;
+    padding-left: 70px;
+    text-align: left;
+  }
+
+  .timeline-year {
+    left: 32px;
+    transform: translateX(-50%);
+    top: 25px;
+  }
+}
