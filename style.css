@@ -1467,9 +1467,10 @@ PRODUCTS & SERVICES PAGE STYLES
   flex-wrap: wrap;
 }
 
-/* Center the text for table cells that span two columns */
+
 .specs-table td[colspan="2"] {
-  text-align: center;
+  text-align: left;
+  padding-left: 10rem; /* Adjust this value to get the perfect position */
 }
 
 .tab-input {
