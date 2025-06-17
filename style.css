@@ -1467,6 +1467,11 @@ PRODUCTS & SERVICES PAGE STYLES
   flex-wrap: wrap;
 }
 
+/* Center the text for table cells that span two columns */
+.specs-table td[colspan="2"] {
+  text-align: center;
+}
+
 .tab-input {
   display: none;
   /* Hide the actual radio button */
