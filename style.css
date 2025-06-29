@@ -2482,3 +2482,125 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
     margin-bottom: 10px;
   }
 }
+
+/*
+=================================
+About Page - Chairman Section
+=================================
+*/
+
+.chairman-section {
+  padding: 100px 40px;
+  background-color: #f8f9fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chairman-container {
+  display: flex;
+  max-width: 1200px;
+  width: 100%;
+  gap: 60px;
+  background-color: #333;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.chairman-image-col {
+  flex-basis: 40%;
+  background-color: #2a2a2a;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.chairman-title-box {
+  border-bottom: 2px solid #f0ad4e;
+  margin-bottom: 30px;
+  padding-bottom: 15px;
+}
+
+.chairman-title-box h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.chairman-photo {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 50%;
+  border: 4px solid #444;
+}
+
+.chairman-details-col {
+  flex-basis: 60%;
+  padding: 60px 40px;
+}
+
+.chairman-name {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #f0ad4e; /* Gold accent color */
+  margin-bottom: 5px;
+}
+
+.chairman-role {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #ccc;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+.chairman-awards-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.chairman-awards-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
+  padding-left: 20px;
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.chairman-awards-list li::before {
+  content: '•';
+  color: #f0ad4e;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Mobile Responsive Styles for Chairman Section */
+@media (max-width: 768px) {
+  .chairman-container {
+    flex-direction: column;
+    gap: 0;
+  }
+  .chairman-details-col {
+    padding: 40px 20px;
+  }
+  .chairman-name {
+    font-size: 1.8rem;
+  }
+  .chairman-role {
+    font-size: 1rem;
+    margin-bottom: 30px;
+  }
+  .chairman-awards-list li {
+    font-size: 0.9rem;
+  }
+}
