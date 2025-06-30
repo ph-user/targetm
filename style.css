@@ -939,13 +939,13 @@ html {
   font-size: 3.5rem;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 80px;
+  margin-bottom: 40px;
   letter-spacing: -1px;
 }
 
 .awards-line {
   max-width: 900px;
-  margin: 0 auto 40px;
+  margin: 0 auto 60px;
   padding: 0 20px;
   font-size: 18px;
   line-height: 1.8;
@@ -961,15 +961,36 @@ html {
   color: #000;
 }
 
-.awards-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  margin-bottom: 60px;
+/* New scrolling container */
+.awards-scroll-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  /* Adding a background to differentiate the scroll area */
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 40px 0;
 }
 
+/* The track that holds and animates the items */
+.awards-scroll-track {
+  display: flex;
+  align-items: stretch; /* Ensures items have same height */
+  gap: 40px;
+  animation: scroll-left 45s linear infinite; /* Reusing the animation */
+  width: fit-content;
+  padding: 0 20px;
+}
+
+.awards-scroll-track:hover {
+  animation-play-state: paused;
+}
+
+/* Updated styles for the individual award items */
 .award-item {
-  background: #f8f9fa;
+  flex-shrink: 0; /* Prevents items from squishing */
+  width: 350px; /* Sets a fixed width for each card */
+  background: #ffffff;
   padding: 20px;
   border-radius: 8px;
   transition: all 0.3s ease;
@@ -1005,6 +1026,7 @@ html {
   color: #7f8c8d;
   line-height: 1.6;
 }
+
 
 
 /* =================================
@@ -2602,5 +2624,18 @@ About Page - Chairman Section
   }
   .chairman-awards-list li {
     font-size: 0.9rem;
+  }
+}
+
+/* Responsive Styles for Scrolling Awards */
+@media (max-width: 768px) {
+  .awards-title {
+    font-size: 2.5rem;
+  }
+  .awards-scroll-track {
+    gap: 20px;
+  }
+  .award-item {
+    width: 300px; /* Slightly smaller cards on mobile */
   }
 }
