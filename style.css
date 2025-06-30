@@ -611,8 +611,13 @@ html {
 }
 
 @keyframes scroll-left {
-  0% { transform: translateX(0); }
-  100% { transform: translateX(-50%); }
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* --- About Page: Company Intro --- */
@@ -728,129 +733,167 @@ html {
   width: 100%;
   height: auto;
   border-radius: 8px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
+/*
+=================================
+About Page: History Timeline (V2 Style)
+=================================
+*/
 
-/* =================================
-   ABOUT PAGE: HISTORY TIMELINE (REFACTORED)
-   ================================= */
 .history-section {
   background: #ffffff;
   padding: 100px 20px;
-  position: relative;
 }
 
 .history-container {
-  max-width: 1200px;
+  max-width: 900px;
   margin: 0 auto;
-  text-align: center;
 }
 
 .history-title {
-  font-size: 3.5rem;
+  position: relative; /* Needed for the ::after pseudo-element */
+  display: inline-block; /* Ensures the line is only as wide as specified */
+  font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
-  margin-bottom: 80px;
-  letter-spacing: -1px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  padding-bottom: 10px; /* Space between text and the new line */
 }
 
-.timeline {
-  position: relative;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-/* The centered vertical line for DESKTOP */
-.timeline::before {
+/* The new decorative line under the title */
+.history-title::after {
   content: '';
   position: absolute;
-  top: 0;
   bottom: 0;
-  width: 4px;
-  background: #e9ecef;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 1;
-}
-
-.timeline-item {
-  position: relative;
-  width: 50%;
-  margin-bottom: 50px;
-  display: flex; /* Use flexbox for content alignment */
-  align-items: center; /* Vertically center content */
-}
-
-.timeline-item.left {
   left: 0;
-  padding-right: 40px; /* Space from center line */
-  justify-content: flex-end; /* Align content to the right */
+  width: 40px;
+  height: 3px;
+  background-color: #3498db;
+}
+
+.history-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 50px;
+}
+
+/* New container for the two-column layout */
+.history-layout-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+.history-timeline-v2 {
+  position: relative;
+  flex: 1; /* Timeline takes up the available space */
+  padding-left: 150px; 
+  border-left: 2px solid #e0e0e0; /* The vertical line */
+}
+
+.timeline-entry {
+  position: relative;
+  margin-bottom: 50px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.timeline-date {
+  position: absolute;
+  left: -175px; 
+  top: -5px;
+  width: 100px;
   text-align: right;
 }
 
-.timeline-item.right {
-  left: 50%;
-  padding-left: 40px; /* Space from center line */
-  justify-content: flex-start; /* Align content to the left */
-  text-align: left;
-}
-
-.timeline-content {
-  background: #f8f9fa;
-  border-radius: 8px;
-  padding: 30px;
-  width: 100%; /* Content takes full width of parent item */
-}
-
-.timeline-image {
-  width: 100%;
-  height: auto;
-  margin-bottom: 15px;
-  border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-title {
-  font-size: 1.3rem;
+.timeline-date .year {
+  font-size: 1.8rem;
   font-weight: 600;
-  color: #2c3e50;
-  margin-bottom: 15px;
+  color: #333;
+  display: block;
 }
 
-.timeline-description {
+.timeline-date .month {
   font-size: 1rem;
-  color: #7f8c8d;
-  line-height: 1.6;
+  color: #777;
 }
 
-.timeline-year {
-  position: absolute;
-  top: 20px;
-  width: 80px;
-  height: 80px;
+.timeline-dot {
+  width: 16px;
+  height: 16px;
   border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  background-color: #3498db;
+  border: 3px solid #ffffff;
+  position: absolute;
+  left: -9px; 
+  top: 0;
+}
+
+.timeline-info {
+  padding-left: 30px; 
+}
+
+.timeline-info p {
   font-size: 1.1rem;
-  font-weight: 700;
-  background: #3498db;
-  color: white;
-  z-index: 5;
-  box-shadow: 0 4px 15px rgba(52, 152, 219, 0.3);
+  color: #333;
+  line-height: 1.7;
+  font-weight: 500;
 }
 
-.timeline-item.left .timeline-year {
-  right: 0;
-  transform: translate(50%, -50%);
+/* New styles for the image gallery on the right */
+.timeline-image-gallery {
+  flex-basis: 300px; /* Increased width to fit images side-by-side */
+  padding-top: 60px; /* Adjusted alignment */
+  display: flex; /* Arrange images with flexbox */
+  flex-wrap: wrap; /* Allow images to wrap to the next line */
+  gap: 20px; /* Spacing between images */
+  justify-content: center; /* Center images in the column */
+  align-content: flex-start; /* Align wrapped items to the top */
 }
 
-.timeline-item.right .timeline-year {
-  left: 0;
-  transform: translate(-50%, -50%);
+.gallery-image-wrapper {
+  margin-bottom: 0; /* Removed margin as 'gap' now handles spacing */
 }
 
+.gallery-image-wrapper img {
+  width: 190px;   
+  height: 190px;  
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  border: 4px solid #fff;
+}
 
+/* Responsive adjustments for the new timeline */
+@media (max-width: 768px) {
+  .history-layout-container {
+    flex-direction: column; /* Stack timeline and images on mobile */
+  }
+  .history-title, .history-subtitle {
+    text-align: center;
+  }
+  .history-title::after {
+    left: 50%;
+    transform: translateX(-50%); /* Center the decorative line */
+  }
+  .timeline-image-gallery {
+    display: flex; /* Display images side-by-side on mobile */
+    gap: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    width: 100%;
+  }
+  .gallery-image-wrapper {
+    margin-bottom: 20px;
+  }
+  .gallery-image-wrapper img {
+    width: 120px;
+    height: 120px;
+  }
+}
 /* --- About Page: Media Network --- */
 .network-section {
   padding: 100px 20px;
@@ -975,9 +1018,11 @@ html {
 /* The track that holds and animates the items */
 .awards-scroll-track {
   display: flex;
-  align-items: stretch; /* Ensures items have same height */
+  align-items: stretch;
+  /* Ensures items have same height */
   gap: 40px;
-  animation: scroll-left 45s linear infinite; /* Reusing the animation */
+  animation: scroll-left 45s linear infinite;
+  /* Reusing the animation */
   width: fit-content;
   padding: 0 20px;
 }
@@ -988,8 +1033,10 @@ html {
 
 /* Updated styles for the individual award items */
 .award-item {
-  flex-shrink: 0; /* Prevents items from squishing */
-  width: 350px; /* Sets a fixed width for each card */
+  flex-shrink: 0;
+  /* Prevents items from squishing */
+  width: 350px;
+  /* Sets a fixed width for each card */
   background: #ffffff;
   padding: 20px;
   border-radius: 8px;
@@ -1229,7 +1276,6 @@ html {
   .next-gen-section,
   .company-intro-section,
   .about-video-section,
-  .history-section,
   .network-section,
   .awards-section,
   .service-intro-section {
@@ -1257,13 +1303,13 @@ html {
   .side-menu {
     padding-top: 60px;
   }
-  
+
   /* --- Home Page --- */
   .video-background {
     margin-top: 60px;
     height: 60vh;
   }
-  
+
   .overlay-text {
     position: absolute;
     top: 50%;
@@ -1280,7 +1326,7 @@ html {
   .overlay-text h2 {
     font-size: 1.2rem;
   }
-  
+
   .overlay-text p {
     font-size: 1rem;
   }
@@ -1300,35 +1346,35 @@ html {
     padding: 10px;
     transform: scale(1) !important;
   }
-  
+
   .stat-circle.featured {
-     transform: scale(1.05) !important;
+    transform: scale(1.05) !important;
   }
 
   .large-number {
     font-size: 1.5rem;
   }
-  
+
   .stat-number {
     font-size: 0.8rem;
   }
-  
+
   .stat-label {
     font-size: 0.8rem;
   }
 
   .next-gen-section {
-      height: auto;
-      min-height: 80vh;
+    height: auto;
+    min-height: 80vh;
   }
 
   .next-gen-title {
     font-size: 2rem;
     margin-bottom: 40px;
   }
-  
+
   .features-list {
-     gap: 30px;
+    gap: 30px;
   }
 
   .feature-item {
@@ -1338,9 +1384,9 @@ html {
     gap: 15px;
     padding: 10px;
   }
-  
+
   .feature-number {
-      font-size: 1.5rem;
+    font-size: 1.5rem;
   }
 
   .feature-text {
@@ -1371,38 +1417,39 @@ html {
   }
 
   /* --- About Page --- */
-  .company-intro-section, .about-video-section {
+  .company-intro-section,
+  .about-video-section {
     margin-top: 60px;
   }
 
   .intro-title,
-  .history-title,
   .network-title,
   .awards-title,
   .service-title {
     font-size: 2.2rem;
     margin-bottom: 40px;
   }
-  
-  .intro-subtitle, .service-subtitle {
+
+  .intro-subtitle,
+  .service-subtitle {
     font-size: 1.1rem;
   }
 
   .intro-stats {
     flex-direction: row;
   }
-  
+
   .about-stat-number {
-      font-size: 2.5rem;
+    font-size: 2.5rem;
   }
 
   .about-video-title {
-      font-size: 2rem;
-      margin-bottom: 20px;
+    font-size: 2rem;
+    margin-bottom: 20px;
   }
 
   .network-section {
-      background-attachment: scroll;
+    background-attachment: scroll;
   }
 
   .network-grid {
@@ -1416,7 +1463,8 @@ html {
 
   /* Timeline Mobile Styles */
   .timeline::before {
-    left: 20px; /* Position line on the left */
+    left: 20px;
+    /* Position line on the left */
     transform: translateX(0);
   }
 
@@ -1424,16 +1472,21 @@ html {
   .timeline-item.right,
   .timeline-item.left {
     width: 100%;
-    left: 0; /* Reset desktop positioning */
-    padding-left: 55px; /* Space for content */
+    left: 0;
+    /* Reset desktop positioning */
+    padding-left: 55px;
+    /* Space for content */
     padding-right: 0;
-    text-align: left; /* Ensure all text is left-aligned */
+    text-align: left;
+    /* Ensure all text is left-aligned */
   }
 
   .timeline-year {
     top: 20px;
-    left: 20px; /* Align bubble with the line */
-    transform: translateX(-50%); /* Center bubble on the line */
+    left: 20px;
+    /* Align bubble with the line */
+    transform: translateX(-50%);
+    /* Center bubble on the line */
     width: 60px;
     height: 60px;
     font-size: 0.9rem;
@@ -1445,7 +1498,7 @@ html {
     align-items: center;
     text-align: center;
   }
-  
+
   .footer-actions {
     flex-direction: column-reverse;
     align-items: center;
@@ -1456,9 +1509,9 @@ html {
     margin-top: 20px;
     margin-bottom: 20px;
   }
-  
+
   .footer-social a {
-      margin-top: 0;
+    margin-top: 0;
   }
 }
 
@@ -1492,7 +1545,8 @@ PRODUCTS & SERVICES PAGE STYLES
 
 .specs-table td[colspan="2"] {
   text-align: left;
-  padding-left: 10rem; /* Adjust this value to get the perfect position */
+  padding-left: 10rem;
+  /* Adjust this value to get the perfect position */
 }
 
 .tab-input {
@@ -2029,7 +2083,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   .next-gen-section,
   .company-intro-section,
   .about-video-section,
-  .history-section,
   .network-section,
   .awards-section,
   .product-specs-section,
@@ -2224,7 +2277,6 @@ MOBILE RESPONSIVE STYLES (Consolidated & Corrected)
   }
 
   .intro-title,
-  .history-title,
   .network-title,
   .awards-title {
     font-size: 2.2rem;
@@ -2528,7 +2580,7 @@ About Page - Chairman Section
   color: #fff;
   border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .chairman-image-col {
@@ -2571,7 +2623,8 @@ About Page - Chairman Section
 .chairman-name {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #f0ad4e; /* Gold accent color */
+  color: #f0ad4e;
+  /* Gold accent color */
   margin-bottom: 5px;
 }
 
@@ -2612,16 +2665,20 @@ About Page - Chairman Section
     flex-direction: column;
     gap: 0;
   }
+
   .chairman-details-col {
     padding: 40px 20px;
   }
+
   .chairman-name {
     font-size: 1.8rem;
   }
+
   .chairman-role {
     font-size: 1rem;
     margin-bottom: 30px;
   }
+
   .chairman-awards-list li {
     font-size: 0.9rem;
   }
@@ -2632,10 +2689,13 @@ About Page - Chairman Section
   .awards-title {
     font-size: 2.5rem;
   }
+
   .awards-scroll-track {
     gap: 20px;
   }
+
   .award-item {
-    width: 300px; /* Slightly smaller cards on mobile */
+    width: 300px;
+    /* Slightly smaller cards on mobile */
   }
 }
