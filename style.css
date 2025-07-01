@@ -1543,9 +1543,9 @@ PRODUCTS & SERVICES PAGE STYLES
 }
 
 
-.specs-table td[colspan="2"] {
+.specs-table td[colspan="3"] {
   text-align: left;
-  padding-left: 10rem;
+  padding-left: 15rem;
   /* Adjust this value to get the perfect position */
 }
 
@@ -1945,7 +1945,7 @@ Product Specifications Section
 
 /* Style for the left-aligned header */
 .specs-header-container {
-  text-align: left;
+  text-align: center;
   max-width: 900px;
   margin: 0 auto 50px auto;
 }
@@ -1953,14 +1953,12 @@ Product Specifications Section
 .product-specs-section .specs-title {
   font-size: 2.2rem;
   margin-bottom: 5px;
-  text-align: left;
 }
 
 .product-specs-section .specs-subtitle {
   font-size: 1.1rem;
   color: #333;
   margin-bottom: 0;
-  text-align: left;
 }
 
 .installation-header {
@@ -2698,4 +2696,154 @@ About Page - Chairman Section
     width: 300px;
     /* Slightly smaller cards on mobile */
   }
+}
+
+/*
+=================================
+NEW: Product Screen Tab Styles
+=================================
+*/
+
+.product-screen-tabs-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #dee2e6;
+}
+
+.product-screen-tabs-bar .tabs-container {
+  display: flex;
+  gap: 5px;
+}
+
+.product-screen-tabs-bar .tab-label {
+  padding: 12px 24px;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #34495e;
+  background-color: transparent;
+  border: none;
+  border-bottom: 3px solid transparent;
+  border-radius: 0;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: -1px; /* Aligns the bottom border with the container's border */
+}
+
+.product-screen-tabs-bar .tab-label:hover {
+  background-color: #f8f9fa;
+  color: #2980b9;
+}
+
+#tab-screen-25:checked ~ .product-screen-tabs-bar label[for="tab-screen-25"],
+#tab-screen-32:checked ~ .product-screen-tabs-bar label[for="tab-screen-32"],
+#tab-screen-55:checked ~ .product-screen-tabs-bar label[for="tab-screen-55"] {
+  color: #2980b9;
+  border-bottom-color: #2980b9;
+}
+
+.product-screen-content-area {
+  padding-top: 40px;
+}
+
+.product-screen-content-panel {
+  display: none;
+  animation: fadeIn 0.5s ease-in-out;
+  gap: 40px;
+  align-items: center;
+  justify-content: center; /* This is the new property to center the content */
+  background-color: #fdfdfd;
+  padding: 30px;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+#tab-screen-25:checked ~ .product-screen-content-area #panel-screen-25,
+#tab-screen-32:checked ~ .product-screen-content-area #panel-screen-32,
+#tab-screen-55:checked ~ .product-screen-content-area #panel-screen-55 {
+  display: flex;
+}
+
+.product-screen-image-wrapper {
+  /* flex property removed to allow content to dictate size */
+  flex-shrink: 0; /* Prevents the image from shrinking */
+  text-align: center;
+}
+
+.product-screen-image-wrapper img {
+  max-width: 100%;
+  height: auto;
+  max-height: 400px;
+  border-radius: 6px;
+}
+
+.product-screen-details {
+  /* flex property removed */
+  max-width: 450px; /* Added max-width to keep details from becoming too wide */
+}
+
+.product-screen-details h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #2c3e50;
+  margin-bottom: 20px;
+}
+
+.product-screen-details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.product-screen-details li {
+  font-size: 1.1rem;
+  color: #333;
+  padding: 8px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.product-screen-details li:last-child {
+  border-bottom: none;
+}
+
+.product-screen-details li strong {
+  color: #34495e;
+  min-width: 120px;
+  display: inline-block;
+}
+
+/* Responsive adjustments for new product tabs */
+@media (max-width: 768px) {
+  .product-screen-tabs-bar .tabs-container {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .product-screen-tabs-bar .tab-label {
+    text-align: center;
+    border-bottom: 1px solid #dee2e6;
+  }
+  
+  #tab-screen-25:checked ~ .product-screen-tabs-bar label[for="tab-screen-25"],
+  #tab-screen-32:checked ~ .product-screen-tabs-bar label[for="tab-screen-32"],
+  #tab-screen-55:checked ~ .product-screen-tabs-bar label[for="tab-screen-55"] {
+    border-bottom-color: #2980b9;
+    border-width: 3px;
+  }
+
+  .product-screen-content-panel {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .product-screen-details h3 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+}
+
+/* Styling for the new network item links */
+.network-item-link {
+  text-decoration: none; /* Removes the underline from links */
+  color: inherit; /* Makes the text color match its container */
+  display: block; /* Ensures the link takes up the full space of the grid item */
 }

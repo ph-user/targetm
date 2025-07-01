@@ -56,63 +56,75 @@
     <section class="product-specs-section">
       <div class="showcase-container" data-aos="fade-up">
         <div class="specs-header-container">
-          <h2 class="specs-title">PRODUCTS | 25-inch &amp; 32-inch</h2>
-          <p class="specs-subtitle">High-quality LED monitors are available in 2 sizes.</p>
+          <h2 class="specs-title">OUR PRODUCTS</h2>
+          <p class="specs-subtitle">High-quality LED monitors are available in 3 sizes.</p>
         </div>
 
-        <div class="specs-images-container">
-          <div class="spec-image-item-wide">
-            <img src="assets/inch.png" alt="25 inch and 32 inch LED Screens">
+        <input type="radio" name="product-screen-tabs" id="tab-screen-25" class="tab-input" checked>
+        <input type="radio" name="product-screen-tabs" id="tab-screen-32" class="tab-input">
+        <input type="radio" name="product-screen-tabs" id="tab-screen-55" class="tab-input">
+
+        <div class="product-screen-tabs-bar">
+          <div class="tabs-container">
+            <label for="tab-screen-25" class="tab-label">25-inch Smart LCD</label>
+            <label for="tab-screen-32" class="tab-label">32-inch Smart LCD</label>
+            <label for="tab-screen-55" class="tab-label">55-inch Smart LCD</label>
           </div>
         </div>
 
-        <h3 class="specs-table-title">25-inch and 32-inch Digital Signage Specifications</h3>
-        <div class="specs-table-wrapper">
-          <table class="specs-table">
-            <thead>
-              <tr>
-                <th>Feature</th>
-                <th>25-inch Smart LCDs</th>
-                <th>32-inch Smart LCDs</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Dimensions</td>
-                <td>H 612.7 x W 274.4 x D 19.9 mm</td>
-                <td>H 728.2 x W 422.6 x D 19.9 mm</td>
-              </tr>
-              <tr>
-                <td>Weight</td>
-                <td>Approx. 5.2 kg</td>
-                <td>Approx. 8.5 kg</td>
-              </tr>
-              <tr>
-                <td>Power</td>
-                <td>220V</td>
-                <td>220V</td>
-              </tr>
-              <tr>
-                <td>Consumption</td>
-                <td>21 W</td>
-                <td>32 W</td>
-              </tr>
-              <tr>
-                <td>Display Hours</td>
-                <td colspan="2">Flexible, subject to buildings</td>
-              </tr>
-              <tr>
-                <td>Frequency</td>
-                <td colspan="2">15 seconds per spot</td>
-              </tr>
-              <tr>
-                <td>Locations</td>
-                <td colspan="2">Elevator Lobbies, Inside Elevators</td>
-              </tr>
-            </tbody>
-          </table>
+        <div class="product-screen-content-area">
+          <div class="product-screen-content-panel" id="panel-screen-25">
+            <div class="product-screen-image-wrapper">
+              <img src="assets/25-inch-screen.jpg" alt="25-inch Smart LCD Screen">
+            </div>
+            <div class="product-screen-details">
+              <h3>25-inch Smart LCD</h3>
+              <ul>
+                <li><strong>Dimensions:</strong> H 612.7 x W 274.4 x D 19.9 mm</li>
+                <li><strong>Weight:</strong> Approx. 5.2 kg</li>
+                <li><strong>Power:</strong> 220V</li>
+                <li><strong>Consumption:</strong> 21 W</li>
+                <li><strong>Typical Location:</strong> Elevator Lobbies</li>
+                <li><strong>Display Hours:</strong> Flexible, subject to building</li>
+                <li><strong>Ad Frequency:</strong> 15 seconds per spot</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-screen-content-panel" id="panel-screen-32">
+            <div class="product-screen-image-wrapper">
+              <img src="assets/32-inch-screen.jpg" alt="32-inch Smart LCD Screen">
+            </div>
+            <div class="product-screen-details">
+              <h3>32-inch Smart LCD</h3>
+              <ul>
+                <li><strong>Dimensions:</strong> H 728.2 x W 422.6 x D 19.9 mm</li>
+                <li><strong>Weight:</strong> Approx. 8.5 kg</li>
+                <li><strong>Power:</strong> 220V</li>
+                <li><strong>Consumption:</strong> 32 W</li>
+                <li><strong>Typical Location:</strong> Inside Elevators</li>
+                <li><strong>Display Hours:</strong> Flexible, subject to building</li>
+                <li><strong>Ad Frequency:</strong> 15 seconds per spot</li>
+              </ul>
+            </div>
+          </div>
+          <div class="product-screen-content-panel" id="panel-screen-55">
+            <div class="product-screen-image-wrapper">
+              <img src="assets/55-inch-screen.jpg" alt="55-inch Smart LCD Screen">
+            </div>
+            <div class="product-screen-details">
+              <h3>55-inch Smart LCD</h3>
+              <ul>
+                <li><strong>Dimensions:</strong> H 1864 x W 721.7 x D 19.9 mm</li>
+                <li><strong>Weight:</strong> Floor-Mounted</li>
+                <li><strong>Power:</strong> 220V</li>
+                <li><strong>Consumption:</strong> 90 W</li>
+                <li><strong>Typical Location:</strong> Elevator Lobbies</li>
+                <li><strong>Display Hours:</strong> Flexible, subject to building</li>
+                <li><strong>Ad Frequency:</strong> 15 seconds per spot</li>
+              </ul>
+            </div>
+          </div>
         </div>
-
         <div class="specs-header-container installation-header">
           <h2 class="specs-title">INSTALLATION LOCATION</h2>
           <p class="specs-subtitle">Installation examples for outside and inside elevators.</p>
@@ -224,7 +236,6 @@
   <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-content">
-        <!-- Company Info -->
         <div class="footer-company">
           <div class="footer-logo">
             <img src="assets/logo.jpg" alt="TargetM Australia Logo" />
@@ -251,7 +262,6 @@
           </div>
         </div>
 
-        <!-- Navigation Links -->
         <div class="footer-navigation">
           <div class="nav-column">
             <a href="index.html">Home</a>
@@ -261,7 +271,6 @@
           </div>
         </div>
 
-        <!-- Back to Top & Social -->
         <div class="footer-actions">
           <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
