@@ -12,6 +12,9 @@
 </head>
 
 <body>
+  <div id="preloader">
+    <div class="flipping-square"></div>
+  </div>
   <header class="fixed-header">
     <a href="index.html"><img src="assets/logo.jpg" alt="TargetM Australia Logo" class="logo"></a>
     <div class="social-icons">
@@ -113,7 +116,7 @@
         <div class="history-timeline-v2">
           <div class="timeline-entry">
             <div class="timeline-date">
-              <span class="year">2002</span>
+              <span class="year">2003</span>
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-info">
@@ -174,7 +177,9 @@
             </div>
             <div class="timeline-dot"></div>
             <div class="timeline-info">
-              <p>Market cap reaches approx. 100 billion RMB</p>
+              <p>Awarded the Best
+                Corporate Management
+                Team in Asia in 2024</p>
             </div>
           </div>
           <div class="timeline-entry">
@@ -223,7 +228,8 @@
             <p class="network-cities">Over 300 cities</p>
           </div>
         </a>
-        <a href="https://www.targetmedia.com.hk/en/home/" class="network-item-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.targetmedia.com.hk/en/home/" class="network-item-link" target="_blank"
+          rel="noopener noreferrer">
           <div class="network-item" data-aos="zoom-in" data-aos-delay="100">
             <h3 class="network-country">Hong Kong SAR</h3>
             <p class="network-cities">Hong Kong</p>
@@ -241,7 +247,8 @@
             <p class="network-cities">Tokyo, Osaka</p>
           </div>
         </a>
-        <a href="https://partners.focusmediakorea.com/" class="network-item-link" target="_blank" rel="noopener noreferrer">
+        <a href="https://partners.focusmediakorea.com/" class="network-item-link" target="_blank"
+          rel="noopener noreferrer">
           <div class="network-item" data-aos="zoom-in" data-aos-delay="400">
             <h3 class="network-country">Korea</h3>
             <p class="network-cities">Seoul, Busan</p>
@@ -425,6 +432,14 @@
         observer.observe(item);
       });
     });
+  </script>
+  <script>
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 1000);
+    }
   </script>
 </body>
 

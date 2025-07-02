@@ -1056,7 +1056,7 @@ About Page: History Timeline (V2 Style)
 .award-image {
   width: 100%;
   height: 200px;
-  object-fit: cover;
+  object-fit: contain;
   border-radius: 6px;
   margin-bottom: 20px;
 }
@@ -2846,4 +2846,54 @@ NEW: Product Screen Tab Styles
   text-decoration: none; /* Removes the underline from links */
   color: inherit; /* Makes the text color match its container */
   display: block; /* Ensures the link takes up the full space of the grid item */
+}
+
+/* Preloader Container Styles */
+#preloader {
+  background: #ffffff; /* White background to hide page content */
+  position: fixed;     /* Sits on top of everything */
+  top: 0;
+  left: 0;
+  width: 100vw;        /* Full viewport width */
+  height: 100vh;       /* Full viewport height */
+  z-index: 9999;       /* Ensures it's on top */
+
+  /* Center the square using Flexbox */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* For the fade-out effect */
+  transition: opacity 0.75s, visibility 0.75s;
+}
+
+/* Class to hide the preloader after loading */
+#preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+
+/* The Flipping Square */
+.flipping-square {
+  width: 50px;
+  height: 50px;
+  background-color: #a57d51; /* The brown color from your image */
+  
+  /* Link to the animation */
+  animation: flip 1.5s infinite ease-in-out;
+}
+
+
+/* The Animation Keyframes */
+@keyframes flip {
+  0% {
+    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
+  }
+  50% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
+  }
+  100% {
+    transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
+  }
 }

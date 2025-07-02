@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,15 +9,23 @@
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
 </head>
+
 <body>
-    <header class="fixed-header">
+  <div id="preloader">
+    <div class="flipping-square"></div>
+  </div>
+  <header class="fixed-header">
     <a href="index.html"><img src="assets/logo.jpg" alt="TargetM Australia Logo" class="logo"></a>
     <div class="social-icons">
       <a target="_blank" href="https://google.com" aria-label="Wechat"><img src="assets/wechat.png" alt="Wechat" /></a>
-      <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
-      <a target="_blank" href="https://google.com" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-      <a target="_blank" href="https://google.com" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-      <a target="_blank" href="https://google.com" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
+      <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
+      <a target="_blank" href="https://google.com" aria-label="Instagram"><img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+      <a target="_blank" href="https://google.com" aria-label="Facebook"><img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+      <a target="_blank" href="https://google.com" aria-label="TikTok"><img
+          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
     </div>
     <div class="menu-icons">
       <button id="menu-toggle" class="menu-toggle" onclick="toggleMenu()" aria-label="Open Menu">☰</button>
@@ -34,25 +43,26 @@
   </nav>
   <div class="contact-page">
     <h1>Contact</h1>
-  
-  </div>
-  
-<section class="contact-form-section" data-aos="fade-up">
-  <div class="contact-intro">
-    <p>If you have any questions or suggestions, feel free to contact us by phone or using the form below.</p>
-    <p>📞 Call us: <a><strong style="color: orange;">1300 876 895</strong></a></p>
-  </div>
-  <form action="https://formsubmit.co/davidli@targetm.com.au" method="POST" class="contact-form">
-    <input type="text" name="name" placeholder="Name *" required>
-    <input type="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email *" required>
-    <input type="text" name="telephone" placeholder="Telephone *" required>
-    <input type="text" name="subject" placeholder="Subject *"  required>
-    <textarea name="content" placeholder="Content *" required></textarea>
-    <button type="submit">Submit</button>
-  </form>
-</section>
 
-<footer class="footer-section">
+  </div>
+
+  <section class="contact-form-section" data-aos="fade-up">
+    <div class="contact-intro">
+      <p>If you have any questions or suggestions, feel free to contact us by phone or using the form below.</p>
+      <p>📞 Call us: <a><strong style="color: orange;">1300 876 895</strong></a></p>
+    </div>
+    <form action="https://formsubmit.co/davidli@targetm.com.au" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Name *" required>
+      <input type="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        placeholder="Email *" required>
+      <input type="text" name="telephone" placeholder="Telephone *" required>
+      <input type="text" name="subject" placeholder="Subject *" required>
+      <textarea name="content" placeholder="Content *" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-content">
         <!-- Company Info -->
@@ -61,27 +71,27 @@
             <img src="assets/logo.jpg" alt="TargetM Australia Logo" />
             <span class="company-location">AUSTRALIA</span>
           </div>
-          
+
           <div class="company-details">
             <h3>Target M Pty Ltd</h3>
             <p>(A-share listed company, ticker 002027, Focus Media Group)</p>
-            
+
             <div class="address">
               <p>Unit B, Level 9, Tower 3, 18-38 Siddeley Street, Melbourne, VIC 3000 (MEL)</p>
               <p>73 Thomas Street, Parramatta, NSW 2150 (SYD)</p>
             </div>
-            
+
             <div class="contact-info">
               <p>davidli@targetm.com.au</p>
               <p>1300 876 895</p>
             </div>
-            
+
             <div class="copyright">
               <p>© 2025 Target M Pty Ltd</p>
             </div>
           </div>
         </div>
-        
+
         <!-- Navigation Links -->
         <div class="footer-navigation">
           <div class="nav-column">
@@ -91,21 +101,27 @@
             <a href="contact.html">Contact</a>
           </div>
         </div>
-        
+
         <!-- Back to Top & Social -->
         <div class="footer-actions">
           <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
             </svg>
           </button>
-          
+
           <div class="footer-social">
-            <a target="_blank" href="https://google.com" aria-label="Wechat"><img src="assets/wechat.png" alt="Wechat" /></a>
-            <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
-            <a target="_blank" href="https://google.com" aria-label="Instagram"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
-            <a target="_blank" href="https://google.com" aria-label="Facebook"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
-            <a target="_blank" href="https://google.com" aria-label="TikTok"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
+            <a target="_blank" href="https://google.com" aria-label="Wechat"><img src="assets/wechat.png"
+                alt="Wechat" /></a>
+            <a target="_blank" href="https://google.com" aria-label="LinkedIn"><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" alt="LinkedIn" /></a>
+            <a target="_blank" href="https://google.com" aria-label="Instagram"><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram" /></a>
+            <a target="_blank" href="https://google.com" aria-label="Facebook"><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" alt="Facebook" /></a>
+            <a target="_blank" href="https://google.com" aria-label="TikTok"><img
+                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" alt="TikTok" /></a>
           </div>
         </div>
       </div>
@@ -115,5 +131,14 @@
 
   <script src="js/menu.js"></script>
   <script>AOS.init();</script>
+  <script>
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 1000);
+    }
+  </script>
 </body>
+
 </html>

@@ -11,6 +11,9 @@
 </head>
 
 <body>
+  <div id="preloader">
+    <div class="flipping-square"></div>
+  </div>
   <header class="fixed-header">
     <a href="index.html"><img src="assets/logo.jpg" alt="TargetM Australia Logo" class="logo"></a>
     <div class="social-icons">
@@ -40,18 +43,18 @@
   </nav>
 
   <main class="full-width-content">
-    
-<section class="service-intro-section" data-aos="fade-up">
-  <div class="service-container">
-    <h1 class="service-title">SERVICES</h1>
-    <p class="service-subtitle"><strong>Passion | Integrity | Compliance | Win-Win</strong></p>
-    <div class="service-description">
-      <p>Elevate the value of your property with Focus Media's premium, state-of-the-art displays.
-         Our new generation of smart signage will accentuate the status and sophistication of your building, 
-         creating a unique experience and a comfortable environment for residents and visitors.</p>
-    </div>
-  </div>
-</section>
+
+    <section class="service-intro-section" data-aos="fade-up">
+      <div class="service-container">
+        <h1 class="service-title">SERVICES</h1>
+        <p class="service-subtitle"><strong>Passion | Integrity | Compliance | Win-Win</strong></p>
+        <div class="service-description">
+          <p>Elevate the value of your property with Focus Media's premium, state-of-the-art displays.
+            Our new generation of smart signage will accentuate the status and sophistication of your building,
+            creating a unique experience and a comfortable environment for residents and visitors.</p>
+        </div>
+      </div>
+    </section>
 
     <section class="product-specs-section">
       <div class="showcase-container" data-aos="fade-up">
@@ -298,6 +301,14 @@
 
   <script src="js/menu.js"></script>
   <script>AOS.init({ once: true, duration: 800 });</script>
+  <script>
+    window.onload = function () {
+      const preloader = document.getElementById('preloader');
+      setTimeout(() => {
+        preloader.classList.add('hidden');
+      }, 1000);
+    }
+  </script>
 </body>
 
 </html>
