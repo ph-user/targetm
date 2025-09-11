@@ -148,6 +148,21 @@ html {
   overflow: hidden;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(to right, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
+  background-size: 20px 20px;
+  /* Size of squares */
+  pointer-events: none;
+  /* So overlay doesn't block clicks */
+}
+
 .video-background {
   position: relative;
   margin-top: 60px;
@@ -735,6 +750,7 @@ html {
   border-radius: 8px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
+
 /*
 =================================
 About Page: History Timeline (V2 Style)
@@ -752,14 +768,17 @@ About Page: History Timeline (V2 Style)
 }
 
 .history-title {
-  position: relative; /* Needed for the ::after pseudo-element */
-  display: inline-block; /* Ensures the line is only as wide as specified */
+  position: relative;
+  /* Needed for the ::after pseudo-element */
+  display: inline-block;
+  /* Ensures the line is only as wide as specified */
   font-size: 2.5rem;
   font-weight: 700;
   color: #2c3e50;
   margin-bottom: 10px;
   letter-spacing: 1px;
-  padding-bottom: 10px; /* Space between text and the new line */
+  padding-bottom: 10px;
+  /* Space between text and the new line */
 }
 
 /* The new decorative line under the title */
@@ -788,9 +807,11 @@ About Page: History Timeline (V2 Style)
 
 .history-timeline-v2 {
   position: relative;
-  flex: 1; /* Timeline takes up the available space */
-  padding-left: 150px; 
-  border-left: 2px solid #e0e0e0; /* The vertical line */
+  flex: 1;
+  /* Timeline takes up the available space */
+  padding-left: 150px;
+  border-left: 2px solid #e0e0e0;
+  /* The vertical line */
 }
 
 .timeline-entry {
@@ -803,7 +824,7 @@ About Page: History Timeline (V2 Style)
 
 .timeline-date {
   position: absolute;
-  left: -175px; 
+  left: -175px;
   top: -5px;
   width: 100px;
   text-align: right;
@@ -828,12 +849,12 @@ About Page: History Timeline (V2 Style)
   background-color: #3498db;
   border: 3px solid #ffffff;
   position: absolute;
-  left: -9px; 
+  left: -9px;
   top: 0;
 }
 
 .timeline-info {
-  padding-left: 30px; 
+  padding-left: 30px;
 }
 
 .timeline-info p {
@@ -845,55 +866,73 @@ About Page: History Timeline (V2 Style)
 
 /* New styles for the image gallery on the right */
 .timeline-image-gallery {
-  flex-basis: 300px; /* Increased width to fit images side-by-side */
-  padding-top: 60px; /* Adjusted alignment */
-  display: flex; /* Arrange images with flexbox */
-  flex-wrap: wrap; /* Allow images to wrap to the next line */
-  gap: 20px; /* Spacing between images */
-  justify-content: center; /* Center images in the column */
-  align-content: flex-start; /* Align wrapped items to the top */
+  flex-basis: 300px;
+  /* Increased width to fit images side-by-side */
+  padding-top: 60px;
+  /* Adjusted alignment */
+  display: flex;
+  /* Arrange images with flexbox */
+  flex-wrap: wrap;
+  /* Allow images to wrap to the next line */
+  gap: 20px;
+  /* Spacing between images */
+  justify-content: center;
+  /* Center images in the column */
+  align-content: flex-start;
+  /* Align wrapped items to the top */
 }
 
 .gallery-image-wrapper {
-  margin-bottom: 0; /* Removed margin as 'gap' now handles spacing */
+  margin-bottom: 0;
+  /* Removed margin as 'gap' now handles spacing */
 }
 
 .gallery-image-wrapper img {
-  width: 190px;   
-  height: 190px;  
+  width: 190px;
+  height: 190px;
   border-radius: 50%;
   object-fit: cover;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   border: 4px solid #fff;
 }
 
 /* Responsive adjustments for the new timeline */
 @media (max-width: 768px) {
   .history-layout-container {
-    flex-direction: column; /* Stack timeline and images on mobile */
+    flex-direction: column;
+    /* Stack timeline and images on mobile */
   }
-  .history-title, .history-subtitle {
+
+  .history-title,
+  .history-subtitle {
     text-align: center;
   }
+
   .history-title::after {
     left: 50%;
-    transform: translateX(-50%); /* Center the decorative line */
+    transform: translateX(-50%);
+    /* Center the decorative line */
   }
+
   .timeline-image-gallery {
-    display: flex; /* Display images side-by-side on mobile */
+    display: flex;
+    /* Display images side-by-side on mobile */
     gap: 20px;
     padding-top: 20px;
     justify-content: center;
     width: 100%;
   }
+
   .gallery-image-wrapper {
     margin-bottom: 20px;
   }
+
   .gallery-image-wrapper img {
     width: 120px;
     height: 120px;
   }
 }
+
 /* --- About Page: Media Network --- */
 .network-section {
   padding: 100px 20px;
@@ -2727,7 +2766,8 @@ NEW: Product Screen Tab Styles
   border-radius: 0;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: -1px; /* Aligns the bottom border with the container's border */
+  margin-bottom: -1px;
+  /* Aligns the bottom border with the container's border */
 }
 
 .product-screen-tabs-bar .tab-label:hover {
@@ -2735,9 +2775,9 @@ NEW: Product Screen Tab Styles
   color: #2980b9;
 }
 
-#tab-screen-25:checked ~ .product-screen-tabs-bar label[for="tab-screen-25"],
-#tab-screen-32:checked ~ .product-screen-tabs-bar label[for="tab-screen-32"],
-#tab-screen-55:checked ~ .product-screen-tabs-bar label[for="tab-screen-55"] {
+#tab-screen-25:checked~.product-screen-tabs-bar label[for="tab-screen-25"],
+#tab-screen-32:checked~.product-screen-tabs-bar label[for="tab-screen-32"],
+#tab-screen-55:checked~.product-screen-tabs-bar label[for="tab-screen-55"] {
   color: #2980b9;
   border-bottom-color: #2980b9;
 }
@@ -2751,22 +2791,24 @@ NEW: Product Screen Tab Styles
   animation: fadeIn 0.5s ease-in-out;
   gap: 40px;
   align-items: center;
-  justify-content: center; /* This is the new property to center the content */
+  justify-content: center;
+  /* This is the new property to center the content */
   background-color: #fdfdfd;
   padding: 30px;
   border-radius: 8px;
   border: 1px solid #e9ecef;
 }
 
-#tab-screen-25:checked ~ .product-screen-content-area #panel-screen-25,
-#tab-screen-32:checked ~ .product-screen-content-area #panel-screen-32,
-#tab-screen-55:checked ~ .product-screen-content-area #panel-screen-55 {
+#tab-screen-25:checked~.product-screen-content-area #panel-screen-25,
+#tab-screen-32:checked~.product-screen-content-area #panel-screen-32,
+#tab-screen-55:checked~.product-screen-content-area #panel-screen-55 {
   display: flex;
 }
 
 .product-screen-image-wrapper {
   /* flex property removed to allow content to dictate size */
-  flex-shrink: 0; /* Prevents the image from shrinking */
+  flex-shrink: 0;
+  /* Prevents the image from shrinking */
   text-align: center;
 }
 
@@ -2779,7 +2821,8 @@ NEW: Product Screen Tab Styles
 
 .product-screen-details {
   /* flex property removed */
-  max-width: 450px; /* Added max-width to keep details from becoming too wide */
+  max-width: 450px;
+  /* Added max-width to keep details from becoming too wide */
 }
 
 .product-screen-details h3 {
@@ -2822,10 +2865,10 @@ NEW: Product Screen Tab Styles
     text-align: center;
     border-bottom: 1px solid #dee2e6;
   }
-  
-  #tab-screen-25:checked ~ .product-screen-tabs-bar label[for="tab-screen-25"],
-  #tab-screen-32:checked ~ .product-screen-tabs-bar label[for="tab-screen-32"],
-  #tab-screen-55:checked ~ .product-screen-tabs-bar label[for="tab-screen-55"] {
+
+  #tab-screen-25:checked~.product-screen-tabs-bar label[for="tab-screen-25"],
+  #tab-screen-32:checked~.product-screen-tabs-bar label[for="tab-screen-32"],
+  #tab-screen-55:checked~.product-screen-tabs-bar label[for="tab-screen-55"] {
     border-bottom-color: #2980b9;
     border-width: 3px;
   }
@@ -2843,20 +2886,28 @@ NEW: Product Screen Tab Styles
 
 /* Styling for the new network item links */
 .network-item-link {
-  text-decoration: none; /* Removes the underline from links */
-  color: inherit; /* Makes the text color match its container */
-  display: block; /* Ensures the link takes up the full space of the grid item */
+  text-decoration: none;
+  /* Removes the underline from links */
+  color: inherit;
+  /* Makes the text color match its container */
+  display: block;
+  /* Ensures the link takes up the full space of the grid item */
 }
 
 /* Preloader Container Styles */
 #preloader {
-  background: #ffffff; /* White background to hide page content */
-  position: fixed;     /* Sits on top of everything */
+  background: #ffffff;
+  /* White background to hide page content */
+  position: fixed;
+  /* Sits on top of everything */
   top: 0;
   left: 0;
-  width: 100vw;        /* Full viewport width */
-  height: 100vh;       /* Full viewport height */
-  z-index: 9999;       /* Ensures it's on top */
+  width: 100vw;
+  /* Full viewport width */
+  height: 100vh;
+  /* Full viewport height */
+  z-index: 9999;
+  /* Ensures it's on top */
 
   /* Center the square using Flexbox */
   display: flex;
@@ -2878,8 +2929,9 @@ NEW: Product Screen Tab Styles
 .flipping-square {
   width: 50px;
   height: 50px;
-  background-color: #a57d51; /* The brown color from your image */
-  
+  background-color: #a57d51;
+  /* The brown color from your image */
+
   /* Link to the animation */
   animation: flip 1.5s infinite ease-in-out;
 }
@@ -2890,9 +2942,11 @@ NEW: Product Screen Tab Styles
   0% {
     transform: perspective(120px) rotateX(0deg) rotateY(0deg);
   }
+
   50% {
     transform: perspective(120px) rotateX(-180deg) rotateY(0deg);
   }
+
   100% {
     transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }
