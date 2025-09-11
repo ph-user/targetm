@@ -157,7 +157,7 @@ html {
   background-image:
     linear-gradient(to right, rgba(0, 0, 0, 0.2) 1px, transparent 1px),
     linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 1px, transparent 1px);
-  background-size: 5px 5px;
+  background-size: 2px 2px;
 
   pointer-events: none;
 
