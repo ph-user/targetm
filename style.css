@@ -3024,3 +3024,8 @@ NEW: Product Screen Tab Styles
 }
 .case-meta h3{ margin:0; font-size:1.15rem; font-weight:800; }
 .case-meta p{ margin:.15rem 0 0; opacity:.9; }
+
+.building-label {
+  border-left: 4px solid #fff;   /* vertical line */
+  padding-left: 12px;            /* space between line and text */
+}
