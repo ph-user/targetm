@@ -2979,11 +2979,15 @@ NEW: Product Screen Tab Styles
 /* label over the image (this is the part you were missing) */
 .building-label {
   position: absolute;
-  left: 20px;
+  left: 0;
   right: 0;
   bottom: 0;
+
   color: #fff;
   background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0));
+
+  padding-left: 40px; 
+  padding-bottom: 16px; 
 }
 
 /* font + sizes */
