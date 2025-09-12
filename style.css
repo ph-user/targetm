@@ -2951,3 +2951,76 @@ NEW: Product Screen Tab Styles
     transform: perspective(120px) rotateX(-180deg) rotateY(-180deg);
   }
 }
+
+.landmark-section {
+  padding: 80px 5%;
+  background: #f7f7f7;
+}
+
+.landmark-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+
+.landmark-cards {
+  display: flex;
+  gap: 20px;
+}
+
+.landmark-card {
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.landmark-card:hover {
+  transform: translateY(-8px);
+}
+
+.landmark-card img {
+  display: block;
+  width: 240px;
+  height: auto;
+}
+
+.card-text {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  padding: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent);
+}
+
+.landmark-content {
+  max-width: 500px;
+}
+
+.landmark-title {
+  font-size: 2.2rem;
+  font-weight: bold;
+  line-height: 1.2;
+}
+
+.landmark-title span {
+  color: #f39c12;
+  /* orange highlight */
+}
+
+.landmark-underline {
+  width: 60px;
+  height: 3px;
+  background: #000;
+  margin: 15px 0;
+}
+
+.landmark-description {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
