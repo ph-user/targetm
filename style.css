@@ -2984,6 +2984,7 @@ NEW: Product Screen Tab Styles
   bottom: 0;
   color: #fff;
   background: linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0));
+  padding-left: 20px;
 }
 
 /* font + sizes */
