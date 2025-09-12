@@ -2952,24 +2952,7 @@ NEW: Product Screen Tab Styles
   }
 }
 
-/* Section shell */
-.cases-section {
-  padding: 80px 5%;
-  background: #f7f7f7;
-}
 
-.cases-wrap {
-  display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 48px;
-  align-items: center;
-}
-
-@media (max-width: 980px) {
-  .cases-wrap {
-    grid-template-columns: 1fr;
-  }
-}
 
 /* ===== Cases / Landmark Marquee ===== */
 .cases-section { padding: 80px 5%; background:#f7f7f7; }
@@ -2999,8 +2982,8 @@ NEW: Product Screen Tab Styles
 
   color:#fff;
   background:linear-gradient(to top, rgba(0,0,0,.65), rgba(0,0,0,0));
-  border-left:2px solid #fff; 
-  padding-left: 16px;        /* vertical line */
+  border-left:1px solid #fff; 
+  padding-left: 20px;        /* vertical line */
 }
 
 /* font + sizes */
