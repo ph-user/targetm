@@ -2974,7 +2974,7 @@ NEW: Product Screen Tab Styles
 /* cards */
 .case-card{ position:relative; width:clamp(240px,26vw,320px); aspect-ratio:3/4; border-radius:10px;
   overflow:hidden; background:#000; box-shadow:0 10px 24px rgba(0,0,0,.12); }
-.case-card img{ width:100%; height:100%; object-fit:cover; display:block; }
+.case-card img{ width:100%; height:100%; object-fit:contain; display:block; }
 
 /* label over the image (this is the part you were missing) */
 .building-label {
