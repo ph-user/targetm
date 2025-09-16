@@ -2972,11 +2972,23 @@ NEW: Product Screen Tab Styles
 @keyframes cases-marquee{ from{transform:translateX(0)} to{transform:translateX(-50%)} }
 
 /* cards */
-.case-card{ position:relative; width:clamp(240px,26vw,320px); aspect-ratio:3/4; border-radius:10px;
-  overflow:hidden; background:#000; box-shadow:0 10px 24px rgba(0,0,0,.12); }
-.case-card img{ width:100%; height:100%; object-fit:contain; display:block; }
+.case-card {
+  position: relative;
+  width: clamp(240px, 26vw, 320px);
+  aspect-ratio: 3/4;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #000; /* fallback */
+  box-shadow: 0 10px 24px rgba(0,0,0,.12);
 
-/* label over the image (this is the part you were missing) */
+  /* background image settings */
+  background-size: cover;       /* fills box fully */
+  background-position: center;  /* centers */
+  background-repeat: no-repeat;
+}
+
+
+
 .building-label {
   position: absolute;
   left: 0;
