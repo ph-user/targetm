@@ -3174,3 +3174,232 @@ NEW: Product Screen Tab Styles
     grid-template-columns: 1fr;
   }
 }
+
+/* =========================================
+   Immersive Connect Section Styles 
+   ========================================= */
+
+.connect-section {
+  position: relative;
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 120px 20px 80px 20px;
+  /* Replace this URL with your own background image */
+  background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=2070&auto=format&fit=crop');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Creates a slight parallax effect */
+}
+
+/* Dark overlay to ensure text is readable over any image */
+.connect-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(15, 20, 25, 0.85); /* Deep dark overlay */
+  z-index: 0;
+}
+
+.connect-container {
+  position: relative;
+  z-index: 1; /* Keeps content above the overlay */
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+/* Left Column: Info */
+.connect-info h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+}
+
+.lead-text {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #e0e0e0;
+  margin-bottom: 40px;
+  max-width: 90%;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.detail-item .icon {
+  font-size: 1.8rem;
+}
+
+.detail-item strong {
+  display: block;
+  font-size: 0.85rem;
+  color: #aaa;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 3px;
+}
+
+.detail-item p, 
+.detail-item a {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.detail-item a:hover {
+  color: orange;
+}
+
+/* Hiring Alert Badge - Adjusted for dark theme */
+.hiring-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: rgba(255, 165, 0, 0.15);
+  border-left: 4px solid orange;
+  padding: 15px 20px;
+  border-radius: 4px;
+  backdrop-filter: blur(5px);
+}
+
+.hiring-alert p {
+  margin: 0;
+  font-size: 0.95rem;
+  color: #ffffff;
+  line-height: 1.5;
+}
+
+.pulse-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: orange;
+  border-radius: 50%;
+  margin-top: 5px;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 rgba(255, 165, 0, 0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(255, 165, 0, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(255, 165, 0, 0); }
+}
+
+/* Right Column: Smart Form - Glassmorphism style */
+.smart-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  font-size: 1rem;
+  font-family: inherit;
+  color: #ffffff;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Dropdown specific styling for dark theme */
+.form-group select {
+  color: rgba(255, 255, 255, 0.8);
+  cursor: pointer;
+}
+
+.form-group select option {
+  background: #222;
+  color: #fff;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: orange;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 15px rgba(255, 165, 0, 0.2);
+}
+
+.form-group textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: orange;
+  color: #111; /* Dark text for contrast against orange */
+  border: none;
+  padding: 16px 30px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+  margin-top: 10px;
+}
+
+.submit-btn:hover {
+  background-color: #ffb732;
+}
+
+.submit-btn:active {
+  transform: scale(0.98);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 900px) {
+  .connect-container {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+  
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .connect-info h1 {
+    font-size: 2.5rem;
+  }
+}
