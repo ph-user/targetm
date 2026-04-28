@@ -3206,6 +3206,7 @@ NEW: Product Screen Tab Styles
   z-index: 0;
 }
 
+/* Update this container block */
 .connect-container {
   position: relative;
   z-index: 1; /* Keeps content above the overlay */
@@ -3214,9 +3215,12 @@ NEW: Product Screen Tab Styles
   gap: 60px;
   max-width: 1200px;
   width: 100%;
+  padding: 0; /* Removed the heavy padding used for the card */
+  /* background, border-radius, and box-shadow have been removed */
 }
 
 /* Left Column: Info */
+/* Ensure text contrasts with the dark background */
 .connect-info h1 {
   font-size: 3rem;
   margin-bottom: 20px;
@@ -3230,23 +3234,6 @@ NEW: Product Screen Tab Styles
   color: #e0e0e0;
   margin-bottom: 40px;
   max-width: 90%;
-}
-
-.contact-details {
-  display: flex;
-  flex-direction: column;
-  gap: 25px;
-  margin-bottom: 40px;
-}
-
-.detail-item {
-  display: flex;
-  align-items: center;
-  gap: 15px;
-}
-
-.detail-item .icon {
-  font-size: 1.8rem;
 }
 
 .detail-item strong {
@@ -3266,6 +3253,25 @@ NEW: Product Screen Tab Styles
   text-decoration: none;
   transition: color 0.3s ease;
 }
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  margin-bottom: 40px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.detail-item .icon {
+  font-size: 1.8rem;
+}
+
+
 
 .detail-item a:hover {
   color: orange;
