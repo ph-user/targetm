@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Connect | TargetM Australia</title>
+  <title>Contact</title>
   <link rel="stylesheet" href="/style.css" />
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
@@ -14,7 +14,6 @@
   <div id="preloader">
     <div class="flipping-square"></div>
   </div>
-  
   <header class="fixed-header">
     <a href="/"><img src="/assets/logo.png" alt="TargetM Australia Logo" style="width: 200px; height: auto;" class="logo"></a>
     <div class="social-icons">
@@ -42,78 +41,31 @@
       <li><a href="/contact/">Contact</a></li>
     </ul>
   </nav>
+  <div class="contact-page">
+    <h1>Contact</h1>
 
-  <section class="connect-section" data-aos="fade-up">
-    <div class="connect-container">
-      
-      <div class="connect-info">
-        <h1>Connect with TargetM</h1>
-        <p class="lead-text">
-          Whether you're looking to elevate your venue with our digital screens, or you're a driven professional ready to join our rapidly growing squad, we want to hear from you.
-        </p>
-        
-        <div class="contact-details">
-          <div class="detail-item">
-            <span class="icon">📞</span>
-            <div>
-              <strong>Call Us</strong>
-              <p><a href="tel:1300876895">1300 876 895</a></p>
-            </div>
-          </div>
-          <div class="detail-item">
-            <span class="icon">✉️</span>
-            <div>
-              <strong>Email Us</strong>
-              <p><a href="mailto:info@targetm.com.au">info@targetm.com.au</a></p>
-            </div>
-          </div>
-        </div>
+  </div>
 
-        <div class="hiring-alert">
-          <span class="pulse-dot"></span>
-          <p><strong>We are hiring!</strong> Actively seeking high-performing Business Development and Sales talent.</p>
-        </div>
-      </div>
-
-      <div class="connect-form-wrapper">
-        <form action="https://formsubmit.co/davidli@targetm.com.au" method="POST" class="smart-form">
-          
-          <div class="form-group full-width">
-            <select name="inquiry_type" required>
-              <option value="" disabled selected>What can we help you with? *</option>
-              <option value="Client - Screen Installation">I want screens for my venue</option>
-              <option value="Careers - BDM/Sales">I'm applying for a Sales/BDM role</option>
-              <option value="Support - General">General Inquiry / Support</option>
-            </select>
-          </div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <input type="text" name="name" placeholder="Name *" required>
-            </div>
-            <div class="form-group">
-              <input type="text" name="telephone" placeholder="Phone *" required>
-            </div>
-          </div>
-
-          <div class="form-group full-width">
-            <input type="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$" placeholder="Email *" required>
-          </div>
-
-          <div class="form-group full-width">
-            <textarea name="content" placeholder="Tell us more... (If applying for a role, please include a link to your LinkedIn profile) *" required></textarea>
-          </div>
-
-          <button type="submit" class="submit-btn">Send Message</button>
-        </form>
-      </div>
-
+  <section class="contact-form-section" data-aos="fade-up">
+    <div class="contact-intro">
+      <p>If you have any questions or suggestions, feel free to contact us by phone or using the form below.</p>
+      <p>📞 Call us: <a><strong style="color: orange;">1300 876 895</strong></a></p>
     </div>
+    <form action="https://formsubmit.co/davidli@targetm.com.au" method="POST" class="contact-form">
+      <input type="text" name="name" placeholder="Name *" required>
+      <input type="email" name="email" required pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+        placeholder="Email *" required>
+      <input type="text" name="telephone" placeholder="Telephone *" required>
+      <input type="text" name="subject" placeholder="Subject *" required>
+      <textarea name="content" placeholder="Content *" required></textarea>
+      <button type="submit">Submit</button>
+    </form>
   </section>
 
   <footer class="footer-section">
     <div class="footer-container">
       <div class="footer-content">
+        <!-- Company Info -->
         <div class="footer-company">
           <div class="footer-logo">
             <img alt="TargetM Australia Logo" src="/assets/logo.png" style="width: 200px; height: auto;" />
@@ -140,6 +92,7 @@
           </div>
         </div>
 
+        <!-- Navigation Links -->
         <div class="footer-navigation">
           <div class="nav-column">
             <a href="/">Home</a>
@@ -149,6 +102,7 @@
           </div>
         </div>
 
+        <!-- Back to Top & Social -->
         <div class="footer-actions">
           <button class="back-to-top" onclick="scrollToTop()" aria-label="Back to Top">
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,6 +127,7 @@
       </div>
     </div>
   </footer>
+
 
   <script src="/js/menu.js"></script>
   <script>AOS.init();</script>
