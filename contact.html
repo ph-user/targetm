@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Focus Media Australia — Upgrade Your Building Communication</title>
+<meta name="description" content="Book a free building assessment. Get a professionally managed digital screen network at zero cost to the building. Contact the Focus Media Australia team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="nav nav-overlay-light">
+  <div class="wrap">
+    <a class="brand" href="index.html" aria-label="Focus Media Australia — home">
+      <span class="dot">F</span>
+      <span>Focus Media<small>Australia</small></span>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html" aria-current="page">Contact</a>
+    </nav>
+    <button class="burger" aria-label="Open menu" aria-controls="mobile-menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+<div class="mobile-menu" id="mobile-menu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<main>
+
+<!-- ============ 1 · CONTACT HERO ============ -->
+<section class="pagehero pagehero-photo">
+  <div class="media" aria-hidden="true"><img src="assets/contact-hero.png" alt=""></div>
+  <div class="wrap">
+    <span class="eyebrow">Upgrade your building communication</span>
+    <h1 class="display">Ready to upgrade your <span class="hl">building?</span></h1>
+    <p class="lead">Get a professional digital screen network at zero cost to the building. We help buildings modernise communication, improve presentation and reduce manual work. Contact us to arrange a free building assessment.</p>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#assessment-form">Book a free assessment <span class="arw">→</span></a>
+      <a class="btn btn-secondary" href="#contact-details">Contact our team</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2 + 3 · CONTACT DETAILS + FORM ============ -->
+<section>
+  <div class="wrap grid" style="grid-template-columns:1fr;gap:var(--s8)">
+    <div class="grid g-2" style="gap:var(--s8);align-items:start">
+
+      <!-- Contact details (CTA 04 destination) -->
+      <div id="contact-details" class="reveal">
+        <span class="eyebrow">Speak with Focus Media</span>
+        <h2>Contact our <span class="hl">team</span></h2>
+        <p class="lead" style="margin-top:16px">Get in touch to discuss your building, location and screen opportunities.</p>
+        <div class="grid" style="gap:var(--s3);margin-top:var(--s5)">
+          <div class="card"><span class="label">Email</span><p style="margin-top:4px"><a class="hl" style="font-weight:600" href="mailto:info@targetm.com.au">info@targetm.com.au</a></p></div>
+          <div class="card"><span class="label">Phone</span><p style="margin-top:4px"><a class="hl" style="font-weight:600" href="tel:1300876895">1300 876 895</a></p></div>
+          <div class="card"><span class="label">Business hours</span><p style="margin-top:4px">Mon–Fri, 9:00am–6:00pm AEST </p></div>
+          <div class="card"><span class="label">Location</span><p style="margin-top:4px">Melbourne, Sydney </p></div>
+        </div>
+      </div>
+
+      <!-- Free assessment form (CTA 01 destination) -->
+      <section id="assessment-form" class="reveal" style="padding:0" aria-labelledby="form-title">
+        <div class="card" style="padding:var(--s7)">
+          <span class="eyebrow">Free assessment</span>
+          <h2 id="form-title" style="font-size:clamp(24px,3vw,32px)">Book a free building <span class="hl">assessment</span></h2>
+          <p style="margin-top:10px">Tell us about your building and we'll recommend the right screen solution.</p>
+
+          <form class="assessment-form" novalidate style="margin-top:var(--s5)" action="https://formsubmit.co/davidli@targetm.com.au" method="POST">
+            <input type="hidden" name="_subject" value="New free assessment enquiry — Focus Media AU website">
+            <input type="hidden" name="_template" value="table">
+            <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+            <div class="form-grid form">
+              <div class="two">
+                <div class="field"><label for="f-name">Name <span class="req">*</span></label><input id="f-name" name="name" type="text" autocomplete="name" required></div>
+                <div class="field"><label for="f-company">Company / building name <span class="req">*</span></label><input id="f-company" name="company" type="text" required></div>
+              </div>
+              <div class="two">
+                <div class="field"><label for="f-role">Role</label><input id="f-role" name="role" type="text" placeholder="e.g. Building manager"></div>
+                <div class="field">
+                  <label for="f-type">Building type <span class="req">*</span></label>
+                  <select id="f-type" name="building_type" required>
+                    <option value="" selected disabled>Select one…</option>
+                    <option>Apartment / residential tower</option>
+                    <option>Hotel / resort</option>
+                    <option>Office tower</option>
+                    <option>Gym / fitness</option>
+                    <option>Student accommodation</option>
+                    <option>Mixed-use / commercial</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+              </div>
+              <div class="field"><label for="f-address">Building address</label><input id="f-address" name="address" type="text" autocomplete="street-address"></div>
+              <div class="two">
+                <div class="field"><label for="f-phone">Phone</label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div>
+                <div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+              </div>
+              <div class="field"><label for="f-message">Message</label><textarea id="f-message" name="message" placeholder="Anything you'd like us to know about the building or your goals."></textarea></div>
+              <div style="display:flex;flex-wrap:wrap;align-items:center;gap:var(--s4)">
+                <button class="btn btn-primary" type="submit">Book a free assessment <span class="arw">→</span></button>
+                <span class="form-note">We'll reply to arrange a site inspection. No cost, no obligation.</span>
+              </div>
+            </div>
+            <div class="form-ok" id="form-ok" tabindex="-1" role="status">
+              <strong>Thank you — your enquiry has been sent.</strong><br>
+              Focus Media will review your building details and contact you to arrange a site inspection.
+            </div>
+            <div class="form-error" id="form-error" tabindex="-1" role="alert">
+              <strong>Something went wrong sending your enquiry.</strong><br>
+              Please try again, or email us directly at <a href="mailto:info@targetm.com.au">info@targetm.com.au</a>.
+            </div>
+          </form>
+        </div>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4 · WHAT HAPPENS NEXT ============ -->
+<section class="dark">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow on-dark">What happens next</span>
+      <h2>A simple process — </h2>
+      <h2>no pressure, no <span class="hl">cost</span></h2>
+      <p class="lead">After receiving your enquiry, we review your building details, get in touch to discuss the opportunity, and arrange a site inspection if suitable.</p>
+    </div>
+    <div class="grid g-4 reveal">
+      <div class="card"><span class="num">1</span><h3>We review your enquiry</h3><p>We check the building type, location and potential screen opportunities.</p></div>
+      <div class="card"><span class="num">2</span><h3>We arrange an inspection</h3><p>Our team visits the site and identifies suitable screen locations.</p></div>
+      <div class="card"><span class="num">3</span><h3>We prepare a proposal</h3><p>We recommend the best screen solution and explain the service model.</p></div>
+      <div class="card"><span class="num">4</span><h3>We install &amp; support</h3><p>Once approved, we install the screens and provide ongoing maintenance and content support.</p></div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="cols">
+      <div>
+        <div class="brand"><span class="dot">F</span><span>Focus Media<small>Australia</small></span></div>
+        <p style="max-width:38ch;color:rgba(247,245,240,.6)">Professional digital screen networks for Australian buildings — global media experience, delivered through local building partnerships.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html#screens">Screen solutions</a></li>
+          <li><a href="index.html#how-it-works">How it works</a></li>
+          <li><a href="about.html">About us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Get in touch</h4>
+        <ul>
+          <li><a href="contact.html#assessment-form">Book a free assessment</a></li>
+          <li><a href="contact.html#contact-details">Contact our team</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="fine">
+      <span>© 2026 Focus Media Australia. All rights reserved.</span>
+      <span>Global scale · Proven media power · Local building solutions.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="main.js"></script>
+</body>
+</html>

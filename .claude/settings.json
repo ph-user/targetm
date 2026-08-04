@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python -c ' *)",
+      "Bash(taskkill //PID 36632 //F)"
+    ]
+  }
+}

@@ -1,476 +1,838 @@
-<!DOCTYPE html>
-
+<!doctype html>
 <html lang="en">
-
-<head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>TargetM Australia</title>
-  <link href="/style.css" rel="stylesheet" />
-  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-  <div id="preloader">
-    <div class="flipping-square"></div>
-  </div>
-  <header class="fixed-header">
-    <a href="/"><img alt="TargetM Australia Logo" class="logo" src="/assets/logo.png"
-        style="width: 200px; height: auto;" /></a>
-    <div class="social-icons">
-      <a aria-label="Wechat" href="https://google.com" target="_blank"><img alt="Wechat" src="/assets/wechat.png" /></a>
-      <a aria-label="LinkedIn" href="https://www.linkedin.com/company/au-focus-media/" target="_blank"><img
-          alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" /></a>
-      <a aria-label="Instagram" href="https://google.com" target="_blank"><img alt="Instagram"
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" /></a>
-      <a aria-label="Facebook" href="https://google.com" target="_blank"><img alt="Facebook"
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" /></a>
-      <a aria-label="TikTok" href="https://google.com" target="_blank"><img alt="TikTok"
-          src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" /></a>
-    </div>
-    <div class="menu-icons">
-      <button aria-label="Open Menu" class="menu-toggle" id="menu-toggle" onclick="toggleMenu()">☰</button>
-      <button aria-label="Close Menu" class="close-btn" id="close-btn" onclick="toggleMenu()">×</button>
-    </div>
-  </header>
-  <nav class="side-menu" id="side-menu">
-    <ul>
-      <li><a href="/">Home</a></li>
-      <li><a href="/about/">About Us</a></li>
-      <li><a href="/product/">Products &amp; Services</a></li>
-      <li><a href="/contact/">Contact</a></li>
-    </ul>
-  </nav>
-  <div class="video-container">
-    <div class="video-background">
-      <video autoplay="" loop="" muted="" playsinline="">
-        <source src="/assets/aubackground.mp4" type="video/mp4" />
-      </video>
-      <div class="overlay"></div>
-      <div class="overlay-text" style="top: 35%;">
-        <h1>Global Share No.1</h1>
-        <h2>Over 3 Million Installations</h2>
-        <p>Pioneering next-gen signage in elevator spaces.</p>
-      </div>
-    </div>
-  </div>
-  <section class="vision-section">
-    <div class="vision-container">
-      <div class="vision-content" data-aos="fade-up">
-        <h1 class="vision-title">Bringing New Vision<br />to Elevators</h1>
-        <p class="vision-subtitle">World's Largest Digital Signage Network Service</p>
-        <div class="vision-stats" data-aos="fade-up" data-aos-delay="200">
-          <div class="stat-circle left-stat">
-            <div class="stat-number">Global Reach<br /><span class="large-number">300</span>+ Cities</div>
-            <div class="stat-label">Worldwide Presence</div>
-          </div>
-          <div class="stat-circle center-stat featured">
-            <div class="stat-number">Installations<br /><span class="large-number">3M+</span>+ Units</div>
-            <div class="stat-label">Proven Track Record</div>
-          </div>
-          <div class="stat-circle right-stat">
-            <div class="stat-number">Daily Reach<br /><span class="large-number">400M</span>+ People</div>
-            <div class="stat-label">Viewer Engagement</div>
-          </div>
-        </div>
-      </div>
-      <!-- Navigation to About Page -->
-      <div class="section-navigation" data-aos="fade-up" data-aos-delay="400">
-        <a class="nav-link" href="/about/">
-          <span>Learn About Our Vision</span>
-          <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-linecap="round"
-              stroke-linejoin="round" stroke-width="2"></path>
-          </svg>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Focus Media Australia — Smarter Screen Networks for Every Building
+    </title>
+    <meta
+      name="description"
+      content="Professional digital screen network solutions for apartments, hotels, offices, gyms and mixed-use buildings. Focus Media manages the network, installation, content and maintenance — at zero cost to the building."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- ============ HEADER ============ -->
+    <header class="nav nav-overlay">
+      <div class="wrap">
+        <a
+          class="brand"
+          href="index.html"
+          aria-label="Focus Media Australia — home"
+        >
+          <span class="dot">F</span>
+          <span>Focus Media<small>Australia</small></span>
         </a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html" aria-current="page">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+        <button
+          class="burger"
+          aria-label="Open menu"
+          aria-controls="mobile-menu"
+          aria-expanded="false"
+        >
+          <span></span><span></span><span></span>
+        </button>
       </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
     </div>
-  </section>
-  <section class="next-gen-section">
-    <div class="next-gen-background">
-      <video autoplay="" loop="" muted="" playsinline="">
-        <source src="/assets/background video.mp4" type="video/mp4" />
-      </video>
-      <div class="dark-overlay"></div>
-    </div>
-    <div class="next-gen-content">
-      <h1 class="next-gen-title" data-aos="fade-up">
-        Target M's<br />
-        Next Generation Signage
-      </h1>
-      <div class="features-list" data-aos="fade-up" data-aos-delay="200">
-        <div class="feature-item" data-aos="fade-left" data-aos-delay="300">
-          <span class="feature-number">01</span>
-          <span class="feature-text">Customize Screen Content Freely!</span>
-        </div>
-        <div class="feature-item" data-aos="fade-left" data-aos-delay="400">
-          <span class="feature-number">02</span>
-          <span class="feature-text">Crystal Clear Visuals That Attract Viewers!</span>
-        </div>
-        <div class="feature-item" data-aos="fade-left" data-aos-delay="500">
-          <span class="feature-number">03</span>
-          <span class="feature-text">Seamless Synchronization Across Multiple Units!</span>
-        </div>
-        <div class="feature-item" data-aos="fade-left" data-aos-delay="600">
-          <span class="feature-number">04</span>
-          <span class="feature-text">Smart Installation Without Wall Damage!</span>
-        </div>
-      </div>
-    </div>
-  </section>
-  <section class="expansion-section">
-    <div class="expansion-container">
-      <div class="expansion-content" data-aos="fade-up">
-        <h1 class="expansion-title">Expanding to Australia!</h1>
-        <div class="expansion-description" data-aos="fade-up" data-aos-delay="200">
-          <p>Simple and Secure installation that keeps infrastructure intact</p>
-          <p>Turn elevator space into information centers</p>
-        </div>
-        <div class="expansion-images" data-aos="fade-up" data-aos-delay="300">
-          <div class="image-container">
-            <img alt="case1" src="/assets/case1.png" />
-          </div>
-          <div class="image-container">
-            <img alt="case2" src="/assets/case2.png" />
-          </div>
-          <div class="image-container">
-            <img alt="case2" src="/assets/55inch.png" />
-          </div>
-        </div>
-        <div class="expansion-info" data-aos="fade-up" data-aos-delay="400">
-          <p>Elevator screen installation expanding to Australia!</p>
-          <p>If you are property owner or management company and want to know more,</p>
-          <p>Please click the button below to reach out!</p>
-        </div>
-      </div>
-      <!-- Navigation to Contact Page -->
-      <div class="section-navigation" data-aos="fade-up" data-aos-delay="500">
-        <a class="contact-nav-button" href="/contact/">
-          <span>Contact Us</span>
-        </a>
-      </div>
-    </div>
-  </section>
-  <!-- ===== Cases / Landmark Marquee (place ABOVE partners-section) ===== -->
-  <section class="cases-section">
-    <div class="cases-wrap">
-      <div class="cases-left" data-aos="fade-right">
-        <div class="cases-title"><span>LANDMARK</span><br>In Australia</div>
-        <div class="cases-underline"></div>
-        <p class="cases-desc">
-          TargetM is honored to collaborate with the most iconic apartment and office buildings in Australia.
-          Our state-of-the-art smart screens transform building commnunication, creating seamless interactions between
-          property managers and residents. At the same time, they empower businesses in Australia and around the globe
-          to deliver precise, impactful brand promotion with exceptional effectiveness.
-        </p>
-      </div>
 
-      <!-- rolling cards like partner logos -->
-      <div class="cases-scroll-container" data-aos="fade-left" data-aos-delay="150">
-        <div class="cases-scroll-track">
-          <!-- one set -->
-          <article class="case-card" style="background-image: url('/assets/Dorsett-WSP.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Dorsett Hotel</h2>
-              <p class="building-subtitle">CBD</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Premier\ Tower.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Premier Tower</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Metropolitan-Melbourne\ CBD.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">Metropolitan</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/The\ Eminence-Calton.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">The Eminence</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/333STK.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">333 STK</h2>
-              <p class="building-subtitle">St Kilda</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Sierra-Hawthorn.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">Sierra</h2>
-              <p class="building-subtitle">Hawthorn</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/wtc.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">World Trade Center</h2>
-              <p class="building-subtitle">Docklands</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Marriott-Docklands.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Mariott Hotel</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/skyone.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Sky One</h2>
-              <p class="building-subtitle">Box Hill</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/prospect.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Prospect</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Trio.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Trio</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/voyage.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Voyage</h2>
-              <p class="building-subtitle">Altona</p>
-            </div>
-          </article>
+    <main>
+      <!-- ============ 0 · COLLAPSE HERO (background collapses into a building screen) ============ -->
+      <section class="collapse-hero" id="cover" aria-label="Focus Media intro">
+        <div class="cstage" id="cstage">
+          <!-- back layer: the lobby / lift wall, revealed as the image collapses -->
+          <div class="lobby">
+            <img
+              id="lobbyImg"
+              src="assets/lobby-lift.jpg"
+              alt="Focus Media screen in a building lift lobby"
+            />
+          </div>
+          <!-- front layer: full-bleed content that collapses onto the screen (swap this image for your own content) -->
+          <div class="content" id="cContent">
+            <img src="assets/moonah-links.jpg" alt="" />
+            <div class="c-ov"></div>
+          </div>
+          <!-- glassy focus frame hint, pinned to the screen -->
+          <div class="c-frame" aria-hidden="true"></div>
+          <!-- state 1 text (over the full-bleed image) -->
+          <div class="c-text-1">
+            <span class="eyebrow on-dark">Focus Media Australia</span>
+            <h1 class="display" style="margin-top: var(--s4)">
+              Your message, on every <span class="hl">screen</span>.
+            </h1>
+            <p class="lead" style="margin-top: var(--s5)">
+              A professionally managed digital screen network — from the lobby
+              to the lift, across your whole building.
+            </p>
+          </div>
+          <!-- state 2 text (over the revealed lobby) -->
+          <div class="c-text-2">
+            <span class="eyebrow">Live in the building</span>
+            <h2 style="margin-top: var(--s3)">
+              One network. Every screen, centrally managed.
+            </h2>
+          </div>
+          <div class="c-scrollhint">Scroll</div>
+        </div>
+      </section>
 
+      <script>
+        (function () {
+          var track = document.getElementById("cover");
+          var stage = document.getElementById("cstage");
+          var lobby = document.getElementById("lobbyImg");
+          if (!track || !stage || !lobby) return;
 
-          <!-- duplicate the SAME set for seamless loop -->
-          <article class="case-card" style="background-image: url('/assets/Dorsett-WSP.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Dorsett Hotel</h2>
-              <p class="building-subtitle">CBD</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Premier\ Tower.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Premier Tower</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Metropolitan-Melbourne\ CBD.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">Metropolitan</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/The\ Eminence-Calton.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">The Eminence</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/333STK.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">333 STK</h2>
-              <p class="building-subtitle">St Kilda</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Sierra-Hawthorn.jpeg');">
-            <div class="building-label">
-              <h2 class="building-title">Sierra</h2>
-              <p class="building-subtitle">Hawthorn</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/wtc.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">World Trade Center</h2>
-              <p class="building-subtitle">Docklands</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Marriott-Docklands.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Mariott Hotel</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/skyone.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Sky One</h2>
-              <p class="building-subtitle">Box Hill</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/prospect.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Prospect</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/Trio.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Trio</h2>
-              <p class="building-subtitle">&nbsp;</p>
-            </div>
-          </article>
-          <article class="case-card" style="background-image: url('/assets/voyage.jpg');">
-            <div class="building-label">
-              <h2 class="building-title">Voyage</h2>
-              <p class="building-subtitle">Altona</p>
-            </div>
-          </article>
+          // Glass rectangle of the screen, as fractions of the lobby image's natural size.
+          // Measured from the source photo — tweak these four numbers to re-align the collapse.
+          var G = { x: 0.44604, y: 0.35069, w: 0.10791, h: 0.34028 };
 
+          // Map the glass rect onto the viewport, replicating object-fit:cover centering.
+          function place() {
+            var vw = stage.clientWidth,
+              vh = stage.clientHeight;
+            stage.style.setProperty("--vw", vw + "px");
+            stage.style.setProperty("--vh", vh + "px");
+            var nW = lobby.naturalWidth || 16,
+              nH = lobby.naturalHeight || 9;
+            var scale = Math.max(vw / nW, vh / nH);
+            var rW = nW * scale,
+              rH = nH * scale;
+            var offX = (vw - rW) / 2,
+              offY = (vh - rH) / 2;
+            stage.style.setProperty("--sx", offX + G.x * rW + "px");
+            stage.style.setProperty("--sy", offY + G.y * rH + "px");
+            stage.style.setProperty("--sw", G.w * rW + "px");
+            stage.style.setProperty("--sh", G.h * rH + "px");
+          }
+
+          // Binary state: past ~35% of the scroll track, collapse. Native scroll, no hijacking.
+          var ticking = false;
+          function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(function () {
+              var r = track.getBoundingClientRect();
+              var scrollable = track.offsetHeight - window.innerHeight;
+              var progress = scrollable > 0 ? -r.top / scrollable : 0;
+              stage.classList.toggle("stage-2", progress > 0.35);
+              ticking = false;
+            });
+          }
+
+          if (lobby.complete) place();
+          else lobby.addEventListener("load", place);
+          window.addEventListener("resize", place, { passive: true });
+          window.addEventListener("scroll", onScroll, { passive: true });
+          onScroll();
+        })();
+      </script>
+
+      <!-- ============ 1 · HERO ============ -->
+      <section class="hero on-dark" id="top">
+        <div class="media">
+          <img src="assets/hero-poster.jpg" alt="" aria-hidden="true" />
+        </div>
+        <div class="wrap">
+          <div class="hero-inner">
+            <span class="eyebrow on-dark"
+              >Australia's premium signage network</span
+            >
+            <h1 class="display">
+              Smarter screen networks for every
+              <span class="hl">building</span>.
+            </h1>
+            <p class="lead">
+              Professional digital screen networks for apartments, hotels,
+              offices, gyms, student accommodation and mixed-use buildings —
+              improving tenant communication, building presentation and daily
+              operation.
+            </p>
+            <p class="fine">
+              We manage the network, installation, content support and
+              maintenance. Your building receives the upgrade at zero cost.
+            </p>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="contact.html#assessment-form"
+                >Book a free assessment <span class="arw">→</span></a
+              >
+              <a class="btn btn-secondary" href="#how-it-works"
+                >See how it works</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 2 · REAL INSTALLS (screen formats) ============ -->
+      <section>
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Placed where you won't miss</span>
+            <h2>
+              <span class="hl">Real</span> installs, in
+              <span class="hl">real</span> buildings
+            </h2>
+            <p class="lead">Every screen is matched to its location — compact in the lift, wall-mounted outside it, and full-scale in the lobby.</p>
+          </div>
+          <div class="grid g-3 reveal">
+            <div>
+              <h3>25&quot; Elevator Display</h3>
+              <p class="dim-spec">H612.7 &times; W274.4 &times; D19.9mm</p>
+              <div class="card card-media" style="padding:0;margin-top:16px">
+                <img src="assets/25inch-lift.png" alt="25-inch screen installed inside a lift" style="aspect-ratio:3/4">
+              </div>
+            </div>
+            <div>
+              <h3>32&quot; Outside Elevator</h3>
+              <p class="dim-spec">H728.2 &times; W422.6 &times; D19.9mm</p>
+              <div class="card card-media" style="padding:0;margin-top:16px">
+                <img src="assets/32inch-lobby.png" alt="32-inch screen wall-mounted outside a lift" style="aspect-ratio:3/4">
+              </div>
+            </div>
+            <div>
+              <h3>55&quot; Lobby Display</h3>
+              <p class="dim-spec">H1864 &times; W721.7 &times; D19.9mm</p>
+              <div class="card card-media" style="padding:0;margin-top:16px">
+                <img src="assets/55inch-screen.jpg" alt="55-inch freestanding screen in a building lobby" style="aspect-ratio:3/4">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 3 · TRANSFORMATION (before / after drag) ============ -->
+      <section class="dark">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow on-dark">Before and after</span>
+            <h2>Drag to see the <span class="hl">difference</span></h2>
+            <p class="lead">
+              The same lobby, two ways to communicate. Move the divider — or use
+              the arrow keys — to compare paper notices with a managed Focus
+              Media screen.
+            </p>
+          </div>
+        </div>
+        <div
+          class="ba reveal"
+          id="ba"
+          role="slider"
+          aria-label="Before and after comparison"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          aria-valuenow="50"
+          tabindex="0"
+        >
+          <div class="scene ba-before" aria-hidden="true">
+            <div class="ph before">
+              <img src="assets/lobby-lift.jpg" alt="" />
+            </div>
+            <span class="tag">Before · Paper &amp; printouts</span>
+          </div>
+          <div class="scene ba-after" id="baAfter" aria-hidden="true">
+            <div class="ph after">
+              <img src="assets/lobby-after.webp" alt="" />
+            </div>
+            <span class="tag">After · Focus Media</span>
+          </div>
+          <div class="ba-handle" id="baHandle">
+            <span class="knob">‹ ›</span>
+          </div>
+        </div>
+        <div class="wrap">
+          <p class="ba-hint">Drag · or use the arrow keys</p>
+        </div>
+      </section>
+
+      <!-- ============ 4 · PLATFORM (screen model switcher) ============ -->
+      <section id="screens" class="dark">
+        <div class="wrap platform-grid reveal">
+          <div>
+            <div class="model-switch" role="tablist" aria-label="Screen models">
+              <button
+                class="model-tab is-on"
+                type="button"
+                data-model="0"
+                role="tab"
+                aria-selected="true"
+              >
+                25&quot; Smart LCD
+              </button>
+              <button
+                class="model-tab"
+                type="button"
+                data-model="1"
+                role="tab"
+                aria-selected="false"
+              >
+                32&quot; Smart LCD
+              </button>
+              <button
+                class="model-tab"
+                type="button"
+                data-model="2"
+                role="tab"
+                aria-selected="false"
+              >
+                55&quot; Smart LCD
+              </button>
+            </div>
+            <div class="stage-3d">
+              <div class="product" id="modelProduct">
+                <img
+                  id="modelImg"
+                  src="assets/g-lift.webp"
+                  alt="25-inch Focus Media screen installed inside a lift"
+                />
+                <div class="spec s1">
+                  <span>Hardware</span><b>Commercial-grade 4K panel</b>
+                </div>
+                <div class="spec s2">
+                  <span>Uptime</span><b>Remotely monitored, 24/7</b>
+                </div>
+                <div class="spec s3">
+                  <span>Content</span><b>Managed by us</b>
+                </div>
+              </div>
+            </div>
+            <p
+              class="caption"
+              id="modelCaption"
+              style="text-align: center; margin-top: var(--s3)"
+            >
+              25-inch Smart LCD
+            </p>
+          </div>
+
+          <div class="platform-copy">
+            <span class="eyebrow on-dark">Screens for every space</span>
+            <h2>
+              The right screen, <span class="hl">professionally run</span>
+            </h2>
+            <p class="lead">
+              Every model is commercial-grade, remotely monitored, and matched
+              to where people actually look — from a compact lift panel to a
+              freestanding lobby display.
+            </p>
+            <ul class="feature-list">
+              <li>
+                <span class="fl-i">a.</span
+                ><span
+                  ><b>Commercial-grade hardware</b>
+                  <p>
+                    Built for always-on public spaces — bright, reliable panels
+                    rated for continuous daily use.
+                  </p></span
+                >
+              </li>
+              <li>
+                <span class="fl-i">b.</span
+                ><span
+                  ><b>Remotely monitored</b>
+                  <p>
+                    Uptime, brightness and content are checked around the clock
+                    from our operations centre.
+                  </p></span
+                >
+              </li>
+              <li>
+                <span class="fl-i">c.</span
+                ><span
+                  ><b>Zero-touch maintenance</b>
+                  <p>
+                    We install, insure and maintain every screen. Your team
+                    never touches the hardware.
+                  </p></span
+                >
+              </li>
+              <li>
+                <span class="fl-i">d.</span
+                ><span
+                  ><b>Matched to the space</b>
+                  <p>
+                    Compact, wall-mounted or freestanding — sized correctly for
+                    where people actually look.
+                  </p></span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 5 · FREE CONTENT DESIGN ============ -->
+      <section class="warm">
+        <div class="wrap grid g-2" style="align-items: center; gap: var(--s8)">
+          <div class="reveal card card-media" style="padding: 0; order: 2">
+            <img
+              src="assets/g-media.webp"
+              alt="Screen-ready building content displayed on a Focus Media screen"
+            />
+          </div>
+          <div class="reveal" style="order: 1">
+            <span class="eyebrow">Free content design &amp; management</span>
+            <h2>Your message, made <span class="hl">screen-ready</span></h2>
+            <p class="lead" style="margin-top: 16px">
+              Your building provides the message; we turn it into professional
+              content — for free. No extra design resource, technical knowledge
+              or content budget required.
+            </p>
+            <ul class="ticks">
+              <li>Digital notice design</li>
+              <li>Building announcement layouts</li>
+              <li>QR code campaign displays</li>
+              <li>Event and facility promotions</li>
+              <li>Safety and maintenance updates</li>
+              <li>Content scheduling &amp; ongoing management</li>
+            </ul>
+            <div class="flow">
+              <span class="step">Building message</span
+              ><span class="arw">→</span>
+              <span class="step">Focus Media design</span
+              ><span class="arw">→</span>
+              <span class="step">Screen-ready content</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 6 · PARTNERSHIP (step timeline, scroll progress rail) ============ -->
+      <section class="dark steps" id="how-it-works">
+        <div class="wrap">
+          <div
+            class="section-head reveal"
+            style="text-align: center; margin-inline: auto"
+          >
+            <span class="eyebrow on-dark">The partnership</span>
+            <h2>Three steps. <span class="hl">Zero effort.</span></h2>
+            <p class="lead" style="margin-inline: auto">
+              A clear, easy process for building partners — with no cost and no
+              complexity.
+            </p>
+          </div>
+
+          <div class="step-track">
+            <div class="step-rail" aria-hidden="true">
+              <i id="railFill"></i>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">1</div>
+              <div class="step-copy">
+                <span class="eyebrow on-dark">Week one</span>
+                <h3>A conversation, then a plan</h3>
+                <p>
+                  We visit your building, inspect the site and agree the right
+                  screen locations — then handle every approval document your
+                  committee needs.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">2</div>
+              <div class="step-copy">
+                <span class="eyebrow on-dark">Week two</span>
+                <h3>We install. You watch.</h3>
+                <p>
+                  Certified installers fit commercial-grade screens in a single
+                  visit — cabled, insured, and switched on before we leave the
+                  building.
+                </p>
+              </div>
+            </div>
+
+            <div class="step reveal">
+              <div class="step-num">3</div>
+              <div class="step-copy">
+                <span class="eyebrow on-dark">Forever after</span>
+                <h3>It simply runs</h3>
+                <p>
+                  Content, monitoring, maintenance and upgrades — all on us, for
+                  the life of the partnership. Zero cost, zero ongoing effort.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="cta-row reveal" style="justify-content: center">
+            <a class="btn btn-primary" href="contact.html#assessment-form"
+              >Book a free assessment <span class="arw">→</span></a
+            >
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 7 · TRUST & CREDIBILITY ============ -->
+      <section class="warm">
+        <div class="wrap">
+          <div class="section-head reveal">
+            <span class="eyebrow">Trust &amp; credibility</span>
+            <h2>Trusted by buildings and <span class="hl">brands</span></h2>
+            <p class="lead">
+              More than installing screens — building a reliable communication
+              platform for long-term value, supporting both property
+              communication and audience engagement.
+            </p>
+          </div>
+          <p class="label reveal" style="margin-top: var(--s7)">
+            Landmark buildings across Australia
+          </p>
+        </div>
+        <div
+          class="marquee reveal"
+          style="--dur: 55s; margin-top: var(--s4)"
+          aria-label="Landmark buildings"
+        >
+          <div class="marquee-track">
+            <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-dorsett.webp" alt="Dorsett Hotel" />
+                    <div class="cap">
+                      <div class="nm">Dorsett Hotel</div>
+                      <div class="su">CBD</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-premier.webp" alt="Premier Tower" />
+                    <div class="cap">
+                      <div class="nm">Premier Tower</div>
+                      <div class="su">Melbourne</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-metropolitan.webp" alt="Metropolitan" />
+                    <div class="cap"><div class="nm">Metropolitan</div></div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-eminence.webp" alt="The Eminence" />
+                    <div class="cap"><div class="nm">The Eminence</div></div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-333stkilda.webp" alt="333 St Kilda Rd" />
+                    <div class="cap">
+                      <div class="nm">333 St Kilda Rd</div>
+                      <div class="su">St Kilda</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-sierra.webp" alt="Sierra" />
+                    <div class="cap">
+                      <div class="nm">Sierra</div>
+                      <div class="su">Hawthorn</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-wtc.webp" alt="World Trade Center" />
+                    <div class="cap">
+                      <div class="nm">World Trade Center</div>
+                      <div class="su">Docklands</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-marriott.webp" alt="Marriott Hotel" />
+                    <div class="cap">
+                      <div class="nm">Marriott Hotel</div>
+                      <div class="su">Melbourne</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-skyone.webp" alt="Sky One" />
+                    <div class="cap">
+                      <div class="nm">Sky One</div>
+                      <div class="su">Box Hill</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-prospect.webp" alt="Prospect" />
+                    <div class="cap"><div class="nm">Prospect</div></div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-trio.webp" alt="Trio" />
+                    <div class="cap"><div class="nm">Trio</div></div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-voyage.webp" alt="Voyage" />
+                    <div class="cap">
+                      <div class="nm">Voyage</div>
+                      <div class="su">Altona</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="lm-card">
+                  <div class="ph">
+                    <img src="assets/b-222lonsdale.webp" alt="222 Lonsdale" />
+                    <div class="cap">
+                      <div class="nm">222 Lonsdale</div>
+                      <div class="su">CBD</div>
+                    </div>
+                  </div>
+                </div>
+                <div aria-hidden="true" style="display: contents">
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-dorsett.webp" alt="Dorsett Hotel" />
+                      <div class="cap">
+                        <div class="nm">Dorsett Hotel</div>
+                        <div class="su">CBD</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-premier.webp" alt="Premier Tower" />
+                      <div class="cap">
+                        <div class="nm">Premier Tower</div>
+                        <div class="su">Melbourne</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img
+                        src="assets/b-metropolitan.webp"
+                        alt="Metropolitan"
+                      />
+                      <div class="cap"><div class="nm">Metropolitan</div></div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-eminence.webp" alt="The Eminence" />
+                      <div class="cap"><div class="nm">The Eminence</div></div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img
+                        src="assets/b-333stkilda.webp"
+                        alt="333 St Kilda Rd"
+                      />
+                      <div class="cap">
+                        <div class="nm">333 St Kilda Rd</div>
+                        <div class="su">St Kilda</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-sierra.webp" alt="Sierra" />
+                      <div class="cap">
+                        <div class="nm">Sierra</div>
+                        <div class="su">Hawthorn</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-wtc.webp" alt="World Trade Center" />
+                      <div class="cap">
+                        <div class="nm">World Trade Center</div>
+                        <div class="su">Docklands</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-marriott.webp" alt="Marriott Hotel" />
+                      <div class="cap">
+                        <div class="nm">Marriott Hotel</div>
+                        <div class="su">Melbourne</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-skyone.webp" alt="Sky One" />
+                      <div class="cap">
+                        <div class="nm">Sky One</div>
+                        <div class="su">Box Hill</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-prospect.webp" alt="Prospect" />
+                      <div class="cap"><div class="nm">Prospect</div></div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-trio.webp" alt="Trio" />
+                      <div class="cap"><div class="nm">Trio</div></div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-voyage.webp" alt="Voyage" />
+                      <div class="cap">
+                        <div class="nm">Voyage</div>
+                        <div class="su">Altona</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="lm-card">
+                    <div class="ph">
+                      <img src="assets/b-222lonsdale.webp" alt="222 Lonsdale" />
+                      <div class="cap">
+                        <div class="nm">222 Lonsdale</div>
+                        <div class="su">CBD</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+      <!-- ============ 8 · TESTIMONIALS (rolling avatar rail) ============ -->
+      <section class="warm testi-photo">
+        <div class="media" aria-hidden="true"><img src="assets/bg.png" alt=""></div>
+        <div class="wrap testi-grid">
+          <div class="reveal">
+            <span class="eyebrow">Testimonials</span>
+            <h2>What partners <span class="hl">say</span></h2>
+
+            <div class="testi-rail" id="testiRail" aria-hidden="true">
+              <div class="testi-line" aria-hidden="true"><i id="testiDot"></i></div>
+
+              <div class="testi-person is-on">
+                <span class="testi-avatar" style="background:linear-gradient(135deg,#CF9300,#8A5F00)">DJ</span>
+                <span class="testi-meta"><b>Diana Johnston</b><span class="testi-role">Body Corporate Chair</span></span>
+              </div>
+              <div class="testi-person">
+                <span class="testi-avatar" style="background:linear-gradient(135deg,#8A5F00,#251A17)">LC</span>
+                <span class="testi-meta"><b>Lauren Contreras</b><span class="testi-role">Building Manager</span></span>
+              </div>
+              <div class="testi-person">
+                <span class="testi-avatar" style="background:linear-gradient(135deg,#C17A01,#CF9300)">EA</span>
+                <span class="testi-meta"><b>Edward Alexander</b><span class="testi-role">Facilities Director</span></span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testi-quote reveal">
+            <span class="testi-mark" aria-hidden="true">&ldquo;</span>
+            <blockquote id="testiText">The committee approved it after a single meeting. Six months on, our lobby looks like a hotel and the notices finally get read.</blockquote>
+            <cite id="testiCite">Body Corporate Chair · Southbank, VIC</cite>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ 9 · FINAL CONTACT PROMPT ============ -->
+      <section class="dark cta-photo">
+        <div class="media" aria-hidden="true"><img src="assets/Contact.jpg" alt=""></div>
+        <div class="wrap">
+          <div class="cta-photo-inner">
+            <span class="eyebrow on-dark">Get started</span>
+            <h2 class="reveal">
+              Ready to upgrade your building
+              <span class="hl">communication?</span>
+            </h2>
+            <p class="lead reveal" style="margin-top: 16px">
+              Start with a free building assessment. We'll recommend suitable
+              screen locations and explain how the service is installed and
+              maintained at zero cost.
+            </p>
+            <div class="cta-row reveal">
+              <a class="btn btn-primary" href="contact.html#assessment-form"
+                >Book a free assessment <span class="arw">→</span></a
+              >
+              <a class="btn btn-secondary" href="contact.html#contact-details"
+                >Contact our team</a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+      <div class="wrap">
+        <div class="cols">
+          <div>
+            <div class="brand">
+              <span class="dot">F</span
+              ><span>Focus Media<small>Australia</small></span>
+            </div>
+            <p style="max-width: 38ch; color: rgba(247, 245, 240, 0.6)">
+              Professional digital screen networks for Australian buildings —
+              global media experience, delivered through local building
+              partnerships.
+            </p>
+          </div>
+          <div>
+            <h4>Explore</h4>
+            <ul>
+              <li><a href="index.html#screens">Screen solutions</a></li>
+              <li><a href="index.html#how-it-works">How it works</a></li>
+              <li><a href="about.html">About us</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Get in touch</h4>
+            <ul>
+              <li>
+                <a href="contact.html#assessment-form"
+                  >Book a free assessment</a
+                >
+              </li>
+              <li>
+                <a href="contact.html#contact-details">Contact our team</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="fine">
+          <span>© 2026 Focus Media Australia. All rights reserved.</span>
+          <span
+            >Global scale · Proven media power · Local building solutions.</span
+          >
         </div>
       </div>
-    </div>
-  </section>
-  <!-- ===== /Cases ===== -->
+    </footer>
 
-
-  <section class="partners-section">
-    <div class="partners-background">
-      <div class="partners-overlay"></div>
-    </div>
-    <div class="partners-content">
-      <h2 class="partners-title" data-aos="fade-up">Our Esteemed Clients and Partners</h2>
-      <h2 class="partners-slogan" data-aos="fade-up">We believe every client is a valuable, long-term partner.</h2>
-      <div class="partners-scroll-container" data-aos="fade-up" data-aos-delay="200">
-        <div class="partners-scroll-track" id="partnersTrack">
-          <!-- First set of partner logos -->
-          <div class="partner-logo">
-            <img alt="A2" src="/assets/a2.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Apple" src="/assets/apple.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Benz" src="/assets/benz.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Bmw" src="/assets/bmw.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="HSBC" src="/assets/HSBC.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Mastercard" src="/assets/mastercard.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Nike" src="/assets/nike.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Swisse" src="/assets/swisse.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Ugg" src="/assets/ugg.png" />
-          </div>
-          <!-- Duplicate set for seamless scrolling -->
-          <div class="partner-logo">
-            <img alt="A2" src="/assets/a2.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Apple" src="/assets/apple.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Benz" src="/assets/benz.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Bmw" src="/assets/bmw.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="HSBC" src="/assets/HSBC.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Mastercard" src="/assets/mastercard.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Nike" src="/assets/nike.png" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Swisse" src="/assets/swisse.jpg" />
-          </div>
-          <div class="partner-logo">
-            <img alt="Ugg" src="/assets/ugg.png" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <footer class="footer-section">
-    <div class="footer-container">
-      <div class="footer-content">
-        <!-- Company Info -->
-        <div class="footer-company">
-          <div class="footer-logo">
-            <img alt="TargetM Australia Logo" src="/assets/logo.png" style="width: 200px; height: auto;" />
-            <span class="company-location">AUSTRALIA</span>
-          </div>
-          <div class="company-details">
-            <h3>Target M Pty Ltd</h3>
-            <p>(A-share listed company, ticker 002027, Focus Media Group)</p>
-            <div class="address">
-              <p>Unit C, Level 11, Tower 4, 18-38 Siddeley Street, Docklands, VIC 3008 (MEL)</p>
-              <p>73 Thomas Street, Parramatta, NSW 2150 (SYD)</p>
-            </div>
-            <div class="contact-info">
-              <p>info@targetm.com.au</p>
-              <p>1300 876 895</p>
-            </div>
-            <div class="copyright">
-              <p>© 2025 Target M Pty Ltd</p>
-            </div>
-          </div>
-        </div>
-        <!-- Navigation Links -->
-        <div class="footer-navigation">
-          <div class="nav-column">
-            <a href="/">Home</a>
-            <a href="/about/">About Us</a>
-            <a href="/product/">Products &amp; Services</a>
-            <a href="/contact/">Contact</a>
-          </div>
-        </div>
-        <!-- Back to Top & Social -->
-        <div class="footer-actions">
-          <button aria-label="Back to Top" class="back-to-top" onclick="scrollToTop()">
-            <svg fill="none" height="24" viewbox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
-              <path d="M12 19V5M5 12L12 5L19 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
-                stroke-width="2"></path>
-            </svg>
-          </button>
-          <div class="footer-social">
-            <a aria-label="Wechat" href="https://google.com" target="_blank"><img alt="Wechat"
-                src="/assets/wechat.png" /></a>
-            <a aria-label="LinkedIn" href="https://www.linkedin.com/company/au-focus-media/" target="_blank"><img
-                alt="LinkedIn" src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg" /></a>
-            <a aria-label="Instagram" href="https://google.com" target="_blank"><img alt="Instagram"
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" /></a>
-            <a aria-label="Facebook" href="https://google.com" target="_blank"><img alt="Facebook"
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/facebook.svg" /></a>
-            <a aria-label="TikTok" href="https://google.com" target="_blank"><img alt="TikTok"
-                src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/tiktok.svg" /></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script src="/js/menu.js"></script>
-  <script>
-    // Initialize AOS
-    AOS.init({
-      duration: 800,
-      easing: 'ease-out-cubic',
-      once: true,
-      offset: 100
-    });
-  </script>
-  <script>
-    window.onload = function () {
-      const preloader = document.getElementById('preloader');
-      setTimeout(() => {
-        preloader.classList.add('hidden');
-      }, 700);
-    }
-  </script>
-</body>
-
+    <script src="main.js"></script>
+  </body>
 </html>

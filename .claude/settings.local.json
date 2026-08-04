@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(taskkill //PID 20524 //F)",
+      "Bash(node -c main.js)",
+      "Bash(python -c ' *)",
+      "Bash(netstat -ano)",
+      "Bash(taskkill //PID 19600 //F)",
+      "Bash(taskkill //PID 15860 //F)",
+      "Bash(taskkill //PID 16512 //F)",
+      "Bash(taskkill //PID 25640 //F)",
+      "Bash(taskkill //PID 21936 //F)",
+      "Bash(taskkill //PID 7768 //F)",
+      "Bash(taskkill //PID 22704 //F)",
+      "Bash(taskkill //PID 28820 //F)",
+      "Bash(python3 -c ' *)"
+    ]
+  }
+}
