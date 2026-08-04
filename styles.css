@@ -446,6 +446,33 @@ section{padding-block:clamp(56px,9vw,104px)}
 .cta-photo-inner{max-width:min(34rem,92%)}
 .cta-photo .lead{color:rgba(247,245,240,.82)}
 
+/* Free content design — full-bleed photo, text weighted to the left */
+.content-photo{position:relative;overflow:hidden;isolation:isolate;padding-block:clamp(4rem,16vh,7.5rem)}
+.content-photo .media{position:absolute;inset:0;z-index:-2}
+.content-photo .media img{width:100%;height:100%;object-fit:cover;object-position:15% center}
+.content-photo::after{content:"";position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(90deg,rgba(22,22,22,.92) 0%,rgba(22,22,22,.74) 32%,rgba(22,22,22,.32) 62%,rgba(22,22,22,.08) 100%),
+    linear-gradient(180deg,rgba(22,22,22,.22),rgba(22,22,22,.4))}
+.content-photo-inner{max-width:min(30rem,92%)}
+.content-photo .lead{color:rgba(247,245,240,.85)}
+.content-photo p{color:rgba(247,245,240,.72)}
+
+@media(max-width:640px){
+  .content-photo::after{background:
+    linear-gradient(180deg,rgba(22,22,22,.9) 0%,rgba(22,22,22,.78) 48%,rgba(22,22,22,.6) 100%)}
+}
+
+.loop-badge{width:172px;height:172px;flex:none;border-radius:50%;border:1px dashed rgba(247,245,240,.4);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+  background:rgba(247,245,240,.04)}
+.loop-row{display:flex;flex-direction:column;align-items:center;line-height:1.05}
+.loop-row b{font-size:26px;font-weight:700;color:var(--highlight)}
+.loop-row span{font-size:10px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:rgba(247,245,240,.6)}
+.loop-split{flex-direction:row;align-items:flex-start;gap:8px}
+.loop-split > div{display:flex;flex-direction:column;align-items:center}
+.loop-slash{font-size:16px;font-weight:600;color:rgba(247,245,240,.35);margin-top:2px}
+
 /* Page hero (About / Contact) — lighter, gradient brand moment */
 .pagehero{background:var(--grad-softwash);border-bottom:1px solid var(--line)}
 .pagehero .wrap{padding-top:calc(var(--nav-h) + clamp(24px,6vh,56px));padding-bottom:clamp(56px,10vh,104px)}
