@@ -49,11 +49,11 @@
   var stage = document.querySelector('.stage-3d');
   if (stage) {
     var MODELS = [
-      { name: '25-inch Smart LCD', img: 'assets/g-lift.webp',
+      { name: '25-inch Smart LCD', img: 'assets/25-png.png',
         alt: '25-inch Focus Media screen installed inside a lift' },
-      { name: '32-inch Smart LCD', img: 'assets/g-directory.webp',
+      { name: '32-inch Smart LCD', img: 'assets/32-png.png',
         alt: '32-inch Focus Media screen wall-mounted in a corridor' },
-      { name: '55-inch Smart LCD', img: 'assets/g-entry.webp',
+      { name: '55-inch Smart LCD', img: 'assets/55-png.png',
         alt: '55-inch Focus Media freestanding screen at a building entrance' }
     ];
     var img = document.getElementById('modelImg');
