@@ -253,11 +253,14 @@ section{padding-block:clamp(56px,9vw,104px)}
 }
 
 /* ---- 6c. Transformation slider (before / after drag, full-bleed) --------- */
+/* object-fit:cover always fills edge-to-edge without distorting the photo's ratio —
+   how much of the image is visible flexes with the window instead of ever leaving
+   empty bars on the sides. */
 .ba{position:relative;width:100%;height:min(66vh,540px);min-height:360px;
   overflow:hidden;touch-action:pan-y;cursor:ew-resize;margin-top:var(--s7)}
 .ba .scene{position:absolute;inset:0}
 .ba .ph{position:absolute;inset:0;overflow:hidden}
-.ba .ph img{width:100%;height:100%;object-fit:contain;display:block}
+.ba .ph img{width:100%;height:100%;object-fit:cover;display:block}
 .ba .ph.before img{filter:grayscale(1) brightness(.62) contrast(.92) sepia(.1)}
 .ba .ph.before::after{content:"";position:absolute;inset:0;background:rgba(8,9,12,.18)}
 .ba .tag{position:absolute;top:var(--s5);font-size:11px;font-weight:700;letter-spacing:.14em;
