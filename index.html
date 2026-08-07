@@ -27,8 +27,7 @@
           href="index.html"
           aria-label="Focus Media Australia — home"
         >
-          <span class="dot">F</span>
-          <span>Focus Media<small>Australia</small></span>
+          <img src="assets/logofm-crop.png" alt="Focus Media Australia" />
         </a>
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
@@ -83,9 +82,9 @@
           </div>
           <!-- state 2 text (over the revealed lobby) -->
           <div class="c-text-2">
-            <span class="eyebrow">Live in the building</span>
+            <span class="eyebrow"></span>
             <h2 style="margin-top: var(--s3)">
-              One network. Every screen, centrally managed.
+              
             </h2>
           </div>
           <div class="c-scrollhint">Scroll</div>
@@ -99,9 +98,10 @@
           var lobby = document.getElementById("lobbyImg");
           if (!track || !stage || !lobby) return;
 
-          // Glass rectangle of the screen, as fractions of the lobby image's natural size.
-          // Measured from the source photo — tweak these four numbers to re-align the collapse.
-          var G = { x: 0.44604, y: 0.35069, w: 0.10791, h: 0.34028 };
+          // Glass rectangle of the screen's visible display surface (bezel excluded),
+          // as fractions of the lobby image's natural size — measured directly from
+          // the source photo. Tweak these four numbers to re-align the collapse.
+          var G = { x: 0.44482, y: 0.34809, w: 0.11011, h: 0.35113 };
 
           // Map the glass rect onto the viewport, replicating object-fit:cover centering.
           function place() {
@@ -791,8 +791,7 @@
         <div class="cols">
           <div>
             <div class="brand">
-              <span class="dot">F</span
-              ><span>Focus Media<small>Australia</small></span>
+              <img src="assets/logofm-crop.png" alt="Focus Media Australia" />
             </div>
             <p style="max-width: 38ch; color: rgba(247, 245, 240, 0.6)">
               Professional digital screen networks for Australian buildings —

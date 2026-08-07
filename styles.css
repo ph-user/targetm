@@ -267,8 +267,8 @@ section{padding-block:clamp(56px,9vw,104px)}
 .ba .tag{position:absolute;top:var(--s4);font-size:11px;font-weight:700;letter-spacing:.14em;
   text-transform:uppercase;padding:8px 14px;border-radius:999px;border:1px solid var(--line);
   background:rgba(255,255,255,.9);backdrop-filter:blur(8px);color:var(--ink-80)}
-.ba-before .tag{left:9%}
-.ba-after .tag{left:59%;color:var(--gold-dark);border-color:rgba(207,147,0,.4)}
+.ba-before .tag{left:var(--s4)}
+.ba-after .tag{right:var(--s4);color:var(--gold-dark);border-color:rgba(207,147,0,.4)}
 .ba-after{clip-path:inset(0 0 0 50%)}
 .ba-handle{position:absolute;top:0;bottom:0;left:50%;width:2px;background:var(--gold);
   box-shadow:0 0 14px rgba(207,147,0,.5);z-index:5;transform:translateX(-50%)}
@@ -309,6 +309,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 }
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:var(--s5)}
 .brand{display:flex;align-items:center;gap:10px;font-weight:700;letter-spacing:-.01em;font-size:18px}
+.brand img{height:48px;width:auto;display:block}
 .brand .dot{width:22px;height:22px;border-radius:6px;background:var(--gold);
   display:grid;place-items:center;color:var(--ink);font-size:13px;font-weight:800}
 .brand small{display:block;font-size:10px;font-weight:600;letter-spacing:.22em;color:var(--ink-60);text-transform:uppercase}
@@ -380,18 +381,18 @@ section{padding-block:clamp(56px,9vw,104px)}
 .cstage{position:sticky;top:0;height:100vh;width:100%;overflow:hidden;background:#0b0b0d}
 .cstage .lobby{position:absolute;inset:0;z-index:0}
 .cstage .lobby img{width:100%;height:100%;object-fit:cover;object-position:center}
-/* content layer: full-bleed in state 1, collapses onto the glass rect in state 2 */
-/* content layer = a CROP WINDOW; the image inside stays locked to the viewport,
-   so the pixels inside the frame are exactly what ends up on the screen (a true crop, not a squish) */
+/* content layer: full-bleed in state 1, collapses onto the glass rect in state 2.
+   The image fills its (shrinking) container directly with object-fit:cover, so the
+   WHOLE photo rescales to fit the screen's own ratio as it collapses — it isn't
+   locked to a fixed viewport crop-window, so whatever happens to show inside the
+   c-frame outline in state 1 is irrelevant; the full photo lands on the screen. */
 .cstage .content{position:absolute;top:0;left:0;width:100%;height:100%;z-index:2;overflow:hidden;border-radius:0;
   will-change:top,left,width,height,border-radius;
   transition:top var(--anim) var(--curve),left var(--anim) var(--curve),
              width var(--anim) var(--curve),height var(--anim) var(--curve),
              border-radius var(--anim) var(--curve),box-shadow var(--anim) var(--curve)}
-.cstage .content img{position:absolute;left:0;top:0;width:var(--vw,100vw);height:var(--vh,100vh);
-  max-width:none;max-height:none;
-  object-fit:cover;object-position:center;will-change:left,top;
-  transition:left var(--anim) var(--curve),top var(--anim) var(--curve)}
+.cstage .content img{position:absolute;inset:0;width:100%;height:100%;
+  object-fit:cover;object-position:center;display:block}
 .cstage .c-ov{position:absolute;inset:0;
   background:linear-gradient(90deg,rgba(11,11,13,.82),rgba(11,11,13,.4) 55%,rgba(11,11,13,.12));
   transition:opacity var(--anim) var(--curve)}
@@ -417,8 +418,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 
 /* --- STATE 2: collapsed --- */
 .cstage.stage-2 .content{top:var(--sy);left:var(--sx);width:var(--sw);height:var(--sh);
-  border-radius:clamp(6px,1vw,14px);box-shadow:0 40px 90px rgba(0,0,0,.30)}
-.cstage.stage-2 .content img{left:calc(-1 * var(--sx));top:calc(-1 * var(--sy))}
+  border-radius:0;box-shadow:0 40px 90px rgba(0,0,0,.30)}
 .cstage.stage-2 .c-ov{opacity:0}
 .cstage.stage-2 .c-frame{border-color:transparent;opacity:0}
 .cstage.stage-2 .c-text-1{opacity:0;transform:translateY(-44px);pointer-events:none}
