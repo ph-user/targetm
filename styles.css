@@ -257,7 +257,8 @@ section{padding-block:clamp(56px,9vw,104px)}
    how much of the image is visible flexes with the window instead of ever leaving
    empty bars on the sides. */
 .ba{position:relative;width:100%;height:min(66vh,540px);min-height:360px;
-  overflow:hidden;touch-action:pan-y;cursor:ew-resize;margin-top:var(--s7)}
+  overflow:hidden;touch-action:pan-y;cursor:ew-resize;margin-top:var(--s7);
+  border-radius:var(--r-lg)}
 .ba .scene{position:absolute;inset:0}
 .ba .ph{position:absolute;inset:0;overflow:hidden}
 .ba .ph img{width:100%;height:100%;object-fit:cover;display:block}
