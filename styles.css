@@ -568,13 +568,6 @@ a.network-item:hover{transform:translateY(-3px);border-color:var(--gold)}
 .network-item p{font-size:13px;color:var(--ink-60)}
 .network-item.is-static{opacity:.65}
 
-/* ---- 11d. Rolling logo strip (About — divided, monochrome on dark) ------ */
-.logo-strip{flex:0 0 auto;display:flex;align-items:center;height:64px;padding:0 28px;
-  border-right:1px solid rgba(247,245,240,.14)}
-.logo-strip img{max-height:30px;width:auto;filter:grayscale(1) brightness(0) invert(1);opacity:.6;
-  transition:opacity .25s}
-.logo-strip:hover img{opacity:1}
-
 /* ---- 11e. Insight cards (About — news & thinking grid) ------------------ */
 .insight-grid{display:grid;gap:var(--s5);margin-top:var(--s7)}
 @media(min-width:768px){.insight-grid{grid-template-columns:repeat(3,1fr)}}
