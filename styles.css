@@ -222,7 +222,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 
 /* Static platform trust chips, floating over the photo edges */
 .spec{position:absolute;display:flex;flex-direction:column;gap:2px;padding:9px 12px;
-  min-width:128px;border-radius:var(--r);background:rgba(35,35,35,.92);backdrop-filter:blur(8px);
+  min-width:128px;border-radius:var(--r);background:rgba(35,35,35,.6);backdrop-filter:blur(8px);
   border:1px solid rgba(247,245,240,.16);box-shadow:var(--e2);
   opacity:0;transform:translateY(14px);transition:opacity .5s var(--ease),transform .5s var(--ease)}
 .reveal.in .spec{opacity:1;transform:none}
