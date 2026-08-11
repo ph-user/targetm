@@ -534,8 +534,7 @@ section{padding-block:clamp(56px,9vw,104px)}
 
 .brand-chip{flex:0 0 auto;width:176px;height:96px;display:grid;place-items:center;
   background:var(--white);border:1px solid var(--line);border-radius:var(--r);padding:20px}
-.brand-chip img{max-height:34px;width:auto;filter:grayscale(1);opacity:.7;transition:filter .2s,opacity .2s}
-.brand-chip:hover img{filter:none;opacity:1}
+.brand-chip img{max-height:34px;width:auto}
 
 @media(prefers-reduced-motion:reduce){
   .marquee{overflow-x:auto;-webkit-mask:none;mask:none}
