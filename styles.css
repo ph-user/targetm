@@ -33,7 +33,7 @@
   --grad-amber:linear-gradient(120deg,#B86F00,#D99922,#FFD083);
 
   /* Type (guide pp.09–13) */
-  --font:'Inter',system-ui,-apple-system,'Segoe UI','Noto Sans SC','PingFang SC',sans-serif;
+  --font:'Inter',system-ui,-apple-system,'Segoe UI','PingFang SC','Hiragino Sans GB','Microsoft YaHei','Noto Sans SC',sans-serif;
 
   /* Spacing — 4px base, 8px rhythm (guide pp.15) */
   --s1:4px;  --s2:8px;  --s3:12px; --s4:16px;
@@ -316,6 +316,8 @@ section{padding-block:clamp(56px,9vw,104px)}
 .nav-links{display:none;align-items:center;gap:var(--s6)}
 .nav-links a{font-size:15px;font-weight:500;color:var(--ink-80);transition:color .15s}
 .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--ink)}
+.nav-links .lang-link{font-weight:700;letter-spacing:.04em}
+.mobile-menu .lang-link{font-weight:700}
 .nav-cta{display:none}
 @media(min-width:900px){.nav-links,.nav-cta{display:flex}}
 .burger{display:inline-flex;flex-direction:column;gap:5px;padding:10px;border:1px solid var(--line);
@@ -661,6 +663,23 @@ a.network-item:hover{transform:translateY(-3px);border-color:var(--gold)}
 .footer .brand small{color:rgba(247,245,240,.55)}
 .footer .fine{margin-top:var(--s7);padding-top:var(--s5);border-top:1px solid rgba(247,245,240,.14);
   display:flex;flex-wrap:wrap;gap:12px;justify-content:space-between;font-size:13px;color:rgba(247,245,240,.5)}
+
+/* ---- 13b. Chinese (zh-Hans) typography — scoped so Latin styles above are untouched --- */
+:lang(zh-Hans) .eyebrow,
+:lang(zh-Hans) .footer h4,
+:lang(zh-Hans) .ba .tag,
+:lang(zh-Hans) .spec span,
+:lang(zh-Hans) .loop-row span,
+:lang(zh-Hans) .insight-tag,
+:lang(zh-Hans) .stat-cell .k{letter-spacing:.06em}
+:lang(zh-Hans) .display,
+:lang(zh-Hans) h1,:lang(zh-Hans) .h1,
+:lang(zh-Hans) h2,:lang(zh-Hans) .h2,
+:lang(zh-Hans) h3,:lang(zh-Hans) .h3{letter-spacing:0}
+:lang(zh-Hans) .lead,
+:lang(zh-Hans) p,
+:lang(zh-Hans) .feature-list p{line-height:1.75}
+:lang(zh-Hans) .display{line-height:1.2}
 
 /* ---- 14. Reveal-on-scroll + motion safety ------------------------------- */
 .reveal{opacity:0;transform:translateY(16px);transition:opacity .6s var(--ease),transform .6s var(--ease)}

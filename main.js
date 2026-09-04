@@ -64,13 +64,16 @@
     function render(i) {
       idx = (i + MODELS.length) % MODELS.length;
       var m = MODELS[idx];
+      var tab = tabs[idx];
+      var name = (tab && tab.dataset.name) || m.name;
+      var alt = (tab && tab.dataset.alt) || m.alt;
       if (img) {
         img.style.opacity = '0';
         img.onload = function () { img.style.opacity = '1'; };
         img.src = m.img;
-        img.alt = m.alt;
+        img.alt = alt;
       }
-      if (elCaption) elCaption.textContent = m.name;
+      if (elCaption) elCaption.textContent = name;
       tabs.forEach(function (t, k) {
         var on = k === idx;
         t.classList.toggle('is-on', on);
@@ -255,7 +258,7 @@
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
       if (err) err.classList.remove('show');
-      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = 'Sending…'; }
+      if (submitBtn) { submitBtn.disabled = true; submitBtn.textContent = (form.dataset.sendingLabel || 'Sending…'); }
 
       fetch(ajaxAction, {
         method: 'POST',

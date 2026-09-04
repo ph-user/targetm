@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://targetm.com.au/sitemap.xml
