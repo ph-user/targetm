@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://targetm.com.au/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/" />
+    <loc>https://www.targetm.com.au/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/" />
   </url>
   <url>
-    <loc>https://targetm.com.au/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/about/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/about/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/about/" />
+    <loc>https://www.targetm.com.au/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/about/" />
   </url>
   <url>
-    <loc>https://targetm.com.au/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/contact/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/contact/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/contact/" />
+    <loc>https://www.targetm.com.au/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/contact/" />
   </url>
   <url>
-    <loc>https://targetm.com.au/zh/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/" />
+    <loc>https://www.targetm.com.au/zh/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/" />
   </url>
   <url>
-    <loc>https://targetm.com.au/zh/about/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/about/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/about/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/about/" />
+    <loc>https://www.targetm.com.au/zh/about/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/about/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/about/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/about/" />
   </url>
   <url>
-    <loc>https://targetm.com.au/zh/contact/</loc>
-    <xhtml:link rel="alternate" hreflang="en" href="https://targetm.com.au/contact/" />
-    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://targetm.com.au/zh/contact/" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://targetm.com.au/contact/" />
+    <loc>https://www.targetm.com.au/zh/contact/</loc>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.targetm.com.au/contact/" />
+    <xhtml:link rel="alternate" hreflang="zh-Hans" href="https://www.targetm.com.au/zh/contact/" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://www.targetm.com.au/contact/" />
   </url>
 </urlset>
