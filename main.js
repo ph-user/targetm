@@ -329,7 +329,7 @@
           .backgroundColor('rgba(0,0,0,0)')
           .showAtmosphere(true)
           .atmosphereColor('#cf9300')
-          .atmosphereAltitude(0.14)
+          .atmosphereAltitude(0.08)
           .polygonsData((countries.features || []).filter(function (f) {
             return f.properties && f.properties.iso !== 'AQ';
           }))
@@ -369,10 +369,10 @@
         }
 
         var mat = world.globeMaterial && world.globeMaterial();
-        if (mat && mat.color) { mat.color.set('#0f1016'); mat.shininess = 6; }
+        if (mat && mat.color) { mat.color.set('#161616'); mat.shininess = 6; }
         if (mat && mat.emissive) { mat.emissive.set('#05070d'); }
 
-        world.pointOfView({ lat: 14, lng: 100, altitude: 2.15 }, 0);
+        world.pointOfView({ lat: 14, lng: 100, altitude: 2.0 }, 0);
 
         var controls = world.controls();
         controls.enableZoom = false;
