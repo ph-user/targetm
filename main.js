@@ -372,7 +372,7 @@
         if (mat && mat.color) { mat.color.set('#0f1016'); mat.shininess = 6; }
         if (mat && mat.emissive) { mat.emissive.set('#05070d'); }
 
-        world.pointOfView({ lat: 16, lng: 100, altitude: 2.3 }, 0);
+        world.pointOfView({ lat: 14, lng: 100, altitude: 2.15 }, 0);
 
         var controls = world.controls();
         controls.enableZoom = false;
