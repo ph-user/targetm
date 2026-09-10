@@ -620,6 +620,32 @@ a.network-item:hover .net-ext{opacity:1;transform:none}
   clip:rect(0 0 0 0);white-space:nowrap;border:0}
 @media(prefers-reduced-motion:reduce){.globe-hint{display:none}}
 
+/* --- Global-presence section background mockups (pick one) --------------- */
+.presence{position:relative;isolation:isolate}
+
+/* A · gradient bloom — warm vertical wash + a soft gold glow behind the globe */
+.presence--bloom{
+  background:
+    radial-gradient(70% 52% at 50% 40%,rgba(207,147,0,.10) 0%,rgba(207,147,0,0) 62%),
+    linear-gradient(180deg,#FBF9F4 0%,#F3F0E7 52%,#F7F5F0 100%);
+}
+
+/* B · fine paper grain — warm base + tiling fractal-noise texture */
+.presence--grain{
+  background-color:#F6F3EC;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3CfeComponentTransfer%3E%3CfeFuncA type='linear' slope='0.05'/%3E%3C/feComponentTransfer%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+
+/* C · faint dot grid — techy texture, stronger centre, fades at the edges */
+.presence--grid{
+  background-color:#F7F5F0;
+  background-image:
+    radial-gradient(circle at 50% 42%,rgba(247,245,240,0) 0%,#F7F5F0 72%),
+    radial-gradient(rgba(22,22,22,.055) 1px,transparent 1.4px);
+  background-size:100% 100%,23px 23px;
+  background-position:center,center;
+}
+
 /* ---- 11e. Insight cards (About — news & thinking grid) ------------------ */
 .insight-grid{display:grid;gap:var(--s5);margin-top:var(--s7)}
 @media(min-width:768px){.insight-grid{grid-template-columns:repeat(3,1fr)}}
