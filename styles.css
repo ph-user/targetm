@@ -569,10 +569,11 @@ section{padding-block:clamp(56px,9vw,104px)}
   margin-top:var(--s4);border:0;border-radius:0;background:transparent;
   height:clamp(420px,66vh,720px)}
 @media(min-width:768px){.globe-stage{display:block}}
-/* faint warm halo so the globe reads as resting on the page */
-.globe-stage::before{content:"";position:absolute;left:50%;top:48%;
-  width:min(78vh,760px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
-  background:radial-gradient(circle,rgba(207,147,0,.10) 0%,rgba(207,147,0,0) 68%);pointer-events:none}
+/* soft contact shadow so the globe reads as resting on the page */
+.globe-stage::before{content:"";position:absolute;left:50%;top:52%;
+  width:min(64vh,640px);aspect-ratio:1;transform:translate(-50%,-50%);border-radius:50%;
+  background:radial-gradient(circle,rgba(22,22,22,.1) 0%,rgba(22,22,22,0) 60%);
+  filter:blur(4px);pointer-events:none}
 .globe-holder{position:absolute;inset:0;touch-action:pan-y}
 .globe-holder canvas{display:block;outline:none}
 .globe-loading{position:absolute;left:0;right:0;top:50%;transform:translateY(-50%);
@@ -594,8 +595,8 @@ section{padding-block:clamp(56px,9vw,104px)}
   transition:opacity .18s ease,transform .18s ease}
 .globe-marker:hover .gm-label,.globe-marker:focus-visible .gm-label{opacity:1;transform:none}
 .globe-marker.is-static{cursor:default}
-.globe-marker.is-static .gm-dot{background:rgba(247,245,240,.55);
-  box-shadow:0 0 0 4px rgba(247,245,240,.12)}
+.globe-marker.is-static .gm-dot{background:rgba(22,22,22,.4);
+  box-shadow:0 0 0 4px rgba(22,22,22,.1)}
 
 /* Market directory — real clickable nav + mobile / no-WebGL / SEO fallback */
 .network-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:var(--s3);margin-top:var(--s6)}

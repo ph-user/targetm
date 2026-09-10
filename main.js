@@ -329,19 +329,19 @@
           .backgroundColor('rgba(0,0,0,0)')
           .showAtmosphere(true)
           .atmosphereColor('#cf9300')
-          .atmosphereAltitude(0.08)
+          .atmosphereAltitude(0.06)
           .polygonsData((countries.features || []).filter(function (f) {
             return f.properties && f.properties.iso !== 'AQ';
           }))
           .polygonCapColor(function (f) {
-            return marketByIso[f.properties.iso] ? 'rgba(207,147,0,0.5)' : 'rgba(247,245,240,0.05)';
+            return marketByIso[f.properties.iso] ? 'rgba(207,147,0,0.95)' : 'rgba(138,128,108,0.42)';
           })
-          .polygonSideColor(function () { return 'rgba(207,147,0,0.06)'; })
+          .polygonSideColor(function () { return 'rgba(110,100,84,0.12)'; })
           .polygonStrokeColor(function (f) {
-            return marketByIso[f.properties.iso] ? 'rgba(212,160,23,0.85)' : 'rgba(247,245,240,0.13)';
+            return marketByIso[f.properties.iso] ? 'rgba(150,99,0,0.95)' : 'rgba(110,100,84,0.34)';
           })
           .polygonAltitude(function (f) {
-            return marketByIso[f.properties.iso] ? 0.014 : 0.007;
+            return marketByIso[f.properties.iso] ? 0.012 : 0.005;
           })
           .onPolygonClick(function (f) { followMarket(marketByIso[f.properties.iso]); })
           .htmlElementsData(markets)
@@ -369,8 +369,21 @@
         }
 
         var mat = world.globeMaterial && world.globeMaterial();
-        if (mat && mat.color) { mat.color.set('#161616'); mat.shininess = 6; }
-        if (mat && mat.emissive) { mat.emissive.set('#05070d'); }
+        if (mat && mat.color) { mat.color.set('#f4efe5'); mat.shininess = 2; }
+        if (mat && mat.emissive) { mat.emissive.set('#e9e2d3'); mat.emissiveIntensity = 0.35; }
+
+        // near-flat, top-lit so the light globe stays even with only a gentle base shade
+        var lights = world.lights && world.lights();
+        if (lights && lights.forEach) {
+          lights.forEach(function (l) {
+            if (/Ambient/i.test(l.type || '')) l.intensity = 2.6;
+            else if (/Directional/i.test(l.type || '')) {
+              l.intensity = 0.85;
+              if (l.position) l.position.set(0.3, 0.8, 1);
+            }
+          });
+          if (world.lights) world.lights(lights);
+        }
 
         world.pointOfView({ lat: 14, lng: 100, altitude: 2.0 }, 0);
 
