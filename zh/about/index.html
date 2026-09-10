@@ -111,18 +111,100 @@
               覆盖主要<span class="hl">城市市场</span>的网络
             </h2>
             <p class="lead">
-              从电梯媒体到楼宇室内屏幕——在这些市场连接品牌、建筑与受众。下方为我们布局的市场地图。
+              从电梯媒体到楼宇室内屏幕——在这些市场连接品牌、建筑与受众。浏览下方网络，点击任一市场即可打开其本地网站。
             </p>
           </div>
 
-          <div class="geo-stage reveal">
-            <!-- Static image, no overlay/links — swap the file to update. -->
-            <img
-              class="geo-svg"
-              src="/assets/worldmap.png"
-              alt="Focus Media 全球市场网络地图"
-            />
+          <div class="geo-stage globe-stage reveal" id="geo-stage">
+            <div class="globe-holder" id="globe-holder"></div>
+            <p class="globe-loading">地球加载中…</p>
+            <p class="globe-hint">拖动旋转 · 点击市场打开其网站</p>
           </div>
+
+          <ul class="network-grid reveal" id="network-grid" aria-label="Focus Media Group 市场">
+            <li data-lat="31.23" data-lng="121.47" data-iso="CN">
+              <a class="network-item" href="https://www.focusmedia.cn" target="_blank" rel="noopener noreferrer">
+                <h3>中国大陆 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>300+ 座城市</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="22.32" data-lng="114.17" data-iso="HK">
+              <a class="network-item" href="https://www.targetmedia.com.hk/en/home/" target="_blank" rel="noopener noreferrer">
+                <h3>中国香港 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>香港</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="1.35" data-lng="103.82" data-iso="SG">
+              <a class="network-item" href="https://www.targetmedia.sg/" target="_blank" rel="noopener noreferrer">
+                <h3>新加坡 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>新加坡</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="35.68" data-lng="139.77" data-iso="JP">
+              <a class="network-item" href="https://www.focus-media.co.jp/" target="_blank" rel="noopener noreferrer">
+                <h3>日本 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>东京、大阪</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="37.57" data-lng="126.98" data-iso="KR">
+              <a class="network-item" href="https://partners.focusmediakorea.com/" target="_blank" rel="noopener noreferrer">
+                <h3>韩国 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>首尔、釜山</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="13.76" data-lng="100.50" data-iso="TH">
+              <a class="network-item" href="https://www.focusmediath.com/" target="_blank" rel="noopener noreferrer">
+                <h3>泰国 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>曼谷</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="-6.21" data-lng="106.85" data-iso="ID">
+              <a class="network-item" href="https://hellotmn.com/" target="_blank" rel="noopener noreferrer">
+                <h3>印度尼西亚 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>大雅加达地区</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="3.14" data-lng="101.69" data-iso="MY">
+              <a class="network-item" href="https://targetmedia.my/" target="_blank" rel="noopener noreferrer">
+                <h3>马来西亚 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>吉隆坡、柔佛、槟城</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="10.82" data-lng="106.63" data-iso="VN">
+              <a class="network-item" href="https://focusmedia.vn/" target="_blank" rel="noopener noreferrer">
+                <h3>越南 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>胡志明市、河内、岘港</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="25.20" data-lng="55.27" data-iso="AE">
+              <a class="network-item" href="https://www.focusmediamea.com/" target="_blank" rel="noopener noreferrer">
+                <h3>阿联酋 <span class="net-ext" aria-hidden="true">↗</span></h3>
+                <p>迪拜、阿布扎比</p>
+                <span class="sr-only">（在新标签页打开）</span>
+              </a>
+            </li>
+            <li data-lat="19.08" data-lng="72.88" data-iso="IN">
+              <span class="network-item is-static">
+                <h3>印度</h3>
+                <p>孟买、新德里、班加罗尔 · 即将上线</p>
+              </span>
+            </li>
+            <li data-lat="-37.81" data-lng="144.96" data-iso="AU">
+              <a class="network-item is-here" href="/zh/">
+                <h3>澳大利亚</h3>
+                <p>墨尔本、悉尼 · 您在这里</p>
+              </a>
+            </li>
+          </ul>
         </div>
       </section>
 

@@ -274,4 +274,149 @@
       });
     });
   }
+
+  /* Global presence — interactive 3D globe (About page). Progressive
+     enhancement over the #network-grid market directory: desktop/tablet only,
+     needs WebGL, and lazy-loads globe.gl only when the section nears view.
+     The grid stays in the DOM as the mobile / no-WebGL / SEO experience. */
+  var globeHolder = document.getElementById('globe-holder');
+  var networkGrid = document.getElementById('network-grid');
+  var geoStage = document.getElementById('geo-stage');
+  if (globeHolder && networkGrid && geoStage &&
+      window.matchMedia('(min-width: 768px)').matches) {
+
+    var webglOK = (function () {
+      try {
+        var c = document.createElement('canvas');
+        return !!(window.WebGLRenderingContext &&
+          (c.getContext('webgl') || c.getContext('experimental-webgl')));
+      } catch (e) { return false; }
+    })();
+
+    if (!webglOK) {
+      geoStage.style.display = 'none';
+    } else {
+      var markets = Array.prototype.slice
+        .call(networkGrid.querySelectorAll('li[data-lat]'))
+        .map(function (li) {
+          var a = li.querySelector('a');
+          var h3 = li.querySelector('h3');
+          return {
+            lat: parseFloat(li.getAttribute('data-lat')),
+            lng: parseFloat(li.getAttribute('data-lng')),
+            iso: li.getAttribute('data-iso'),
+            label: h3 ? h3.textContent.replace(/[↗\s]+$/, '').trim() : '',
+            url: a ? a.getAttribute('href') : null,
+            external: !!(a && a.getAttribute('target') === '_blank')
+          };
+        });
+      var marketByIso = {};
+      markets.forEach(function (m) { if (m.iso) marketByIso[m.iso] = m; });
+
+      var followMarket = function (m) {
+        if (!m || !m.url) return;
+        if (m.external) window.open(m.url, '_blank', 'noopener');
+        else window.location.href = m.url;
+      };
+
+      var buildGlobe = function (countries) {
+        if (typeof Globe !== 'function') { geoStage.style.display = 'none'; return; }
+        var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+        var world = Globe()(globeHolder)
+          .width(globeHolder.clientWidth)
+          .height(globeHolder.clientHeight)
+          .backgroundColor('rgba(0,0,0,0)')
+          .showAtmosphere(true)
+          .atmosphereColor('#cf9300')
+          .atmosphereAltitude(0.14)
+          .polygonsData((countries.features || []).filter(function (f) {
+            return f.properties && f.properties.iso !== 'AQ';
+          }))
+          .polygonCapColor(function (f) {
+            return marketByIso[f.properties.iso] ? 'rgba(207,147,0,0.5)' : 'rgba(247,245,240,0.05)';
+          })
+          .polygonSideColor(function () { return 'rgba(207,147,0,0.06)'; })
+          .polygonStrokeColor(function (f) {
+            return marketByIso[f.properties.iso] ? 'rgba(212,160,23,0.85)' : 'rgba(247,245,240,0.13)';
+          })
+          .polygonAltitude(function (f) {
+            return marketByIso[f.properties.iso] ? 0.014 : 0.007;
+          })
+          .onPolygonClick(function (f) { followMarket(marketByIso[f.properties.iso]); })
+          .htmlElementsData(markets)
+          .htmlLat(function (d) { return d.lat; })
+          .htmlLng(function (d) { return d.lng; })
+          .htmlAltitude(0.02)
+          .htmlElement(function (d) {
+            var el = document.createElement(d.url ? 'a' : 'span');
+            el.className = 'globe-marker' + (d.url ? '' : ' is-static');
+            if (d.url) {
+              el.href = d.url;
+              if (d.external) { el.target = '_blank'; el.rel = 'noopener noreferrer'; }
+            }
+            el.setAttribute('aria-label', d.label + (d.external ? ' (opens in a new tab)' : ''));
+            el.innerHTML = '<span class="gm-dot"></span><span class="gm-label"></span>';
+            el.querySelector('.gm-label').textContent = d.label;
+            return el;
+          });
+
+        if (typeof world.htmlElementVisibilityModifier === 'function') {
+          world.htmlElementVisibilityModifier(function (el, isVisible) {
+            el.style.opacity = isVisible ? '1' : '0';
+            el.style.pointerEvents = isVisible ? 'auto' : 'none';
+          });
+        }
+
+        var mat = world.globeMaterial && world.globeMaterial();
+        if (mat && mat.color) { mat.color.set('#0f1016'); mat.shininess = 6; }
+        if (mat && mat.emissive) { mat.emissive.set('#05070d'); }
+
+        world.pointOfView({ lat: 16, lng: 100, altitude: 2.3 }, 0);
+
+        var controls = world.controls();
+        controls.enableZoom = false;
+        controls.enablePan = false;
+        controls.autoRotate = !reduce;
+        controls.autoRotateSpeed = 0.55;
+        globeHolder.addEventListener('pointerdown', function () {
+          controls.autoRotate = false;
+        }, { once: true });
+
+        geoStage.classList.add('is-ready');
+
+        window.addEventListener('resize', function () {
+          world.width(globeHolder.clientWidth).height(globeHolder.clientHeight);
+        }, { passive: true });
+      };
+
+      var started = false;
+      var startGlobe = function () {
+        if (started) return;
+        started = true;
+        var s = document.createElement('script');
+        s.src = '/assets/globe.gl.min.js';
+        s.async = true;
+        s.onload = function () {
+          fetch('/assets/countries-110m.geojson')
+            .then(function (r) { return r.json(); })
+            .then(buildGlobe)
+            .catch(function () { geoStage.style.display = 'none'; });
+        };
+        s.onerror = function () { geoStage.style.display = 'none'; };
+        document.head.appendChild(s);
+      };
+
+      if ('IntersectionObserver' in window) {
+        var gio = new IntersectionObserver(function (entries) {
+          for (var i = 0; i < entries.length; i++) {
+            if (entries[i].isIntersecting) { gio.disconnect(); startGlobe(); break; }
+          }
+        }, { rootMargin: '300px 0px' });
+        gio.observe(geoStage);
+      } else {
+        startGlobe();
+      }
+    }
+  }
 })();
